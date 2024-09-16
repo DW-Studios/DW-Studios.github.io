@@ -1,7 +1,7 @@
 @font-face {
     font-family: 'KG Lego House';
-    src: url('fonts/KGLegoHouse.woff2') format('woff2'),
-         url('fonts/KGLegoHouse.woff') format('woff');
+    src: url('Fonts/KGLegoHouse.woff2') format('woff2'),
+         url('Fonts/KGLegoHouse.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
