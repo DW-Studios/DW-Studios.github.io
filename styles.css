@@ -1,5 +1,4 @@
-/* styles.css */
-
+/* Fuente personalizada */
 @font-face {
     font-family: 'KG Lego House';
     src: url('Fonts/KGLegoHouse.woff2') format('woff2'),
@@ -9,14 +8,16 @@
     font-display: swap;
 }
 
+/* Estilos generales */
 body {
-    font-family: 'KG Lego House', sans-serif;
+    font-family: 'KG Lego House', sans-serif; /* Fuente personalizada para todo el cuerpo */
     background-color: black;
     color: white;
     margin: 0;
     padding: 0;
 }
 
+/* Estilos para el menú */
 header {
     display: flex;
     justify-content: space-between;
@@ -45,6 +46,7 @@ nav a:hover {
     text-decoration: underline;
 }
 
+/* Dropdown */
 .dropdown {
     position: relative;
     display: inline-block;
@@ -59,6 +61,7 @@ nav a:hover {
     cursor: pointer;
     display: flex;
     align-items: center;
+    font-family: 'KG Lego House', sans-serif; /* Fuente personalizada */
 }
 
 .arrow {
@@ -90,6 +93,7 @@ nav a:hover {
     display: block;
 }
 
+/* Sección de inicio */
 .home-section {
     display: flex;
     justify-content: center;
@@ -103,6 +107,7 @@ nav a:hover {
     max-width: 800px; /* Limita el ancho del contenido para mejorar la legibilidad */
 }
 
+/* Pie de página */
 footer {
     display: flex;
     justify-content: center;
