@@ -1,39 +1,10 @@
-/* Define la fuente personalizada Eordeoghlakat */
-@font-face {
-    font-family: 'Eordeoghlakat';
-    src: url('Fonts/Eordeoghlakat.woff2') format('woff2'),
-         url('Fonts/Eordeoghlakat.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
-/* Define la fuente personalizada KG Lego House */
-@font-face {
-    font-family: 'KG Lego House';
-    src: url('Fonts/KGLegoHouse.woff2') format('woff2'),
-         url('Fonts/KGLegoHouse.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
 /* General styles */
 body {
-    font-family: 'Arial', sans-serif; /* Fuente por defecto para todo el cuerpo */
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #000000; /* Fondo negro */
-    color: #ffffff; /* Texto blanco por defecto */
-}
-
-a {
-    color: #ffffff; /* Color del enlace */
-    text-decoration: none; /* Quita el subrayado de los enlaces */
-}
-
-a:hover {
-    text-decoration: underline; /* Subrayado al pasar el ratón sobre el enlace */
+    background-color: #000000;
+    color: #ffffff;
 }
 
 /* Estilo del encabezado */
@@ -45,24 +16,27 @@ header {
     padding: 10px 20px;
 }
 
+/* Alinea el logo a la izquierda y el menú a la derecha */
 header img {
-    height: 40px; /* Ajusta la altura de la imagen del título */
+    height: 40px;
 }
 
 header nav {
     display: flex;
     gap: 10px;
+    margin-left: auto; /* Mueve el menú a la izquierda */
 }
 
 header nav a {
     color: #ffffff;
-    font-family: 'KG Lego House', sans-serif; /* Aplica la fuente KG Lego House a los botones del menú */
+    font-family: 'KG Lego House', sans-serif;
     padding: 10px;
     text-transform: uppercase;
+    margin-left: 10px; /* Añade margen a la izquierda para desplazar los botones */
 }
 
 header nav a:hover {
-    color: #cccccc; /* Cambia el color al pasar el ratón */
+    color: #cccccc;
 }
 
 /* Estilo del dropdown de Games */
@@ -89,7 +63,7 @@ header nav a:hover {
     padding: 12px 16px;
     text-decoration: none;
     display: block;
-    font-family: 'Eordeoghlakat', sans-serif; /* Aplica la fuente personalizada Eordeoghlakat al contenido del dropdown */
+    font-family: 'Eordeoghlakat', sans-serif;
 }
 
 .dropdown-content a:hover {
@@ -99,19 +73,19 @@ header nav a:hover {
 /* Estilo del contenido principal */
 main {
     padding: 20px;
-    text-align: center; /* Centra el texto en la página principal */
+    text-align: center;
 }
 
 h1, p {
-    font-family: 'KG Lego House', sans-serif; /* Aplica la fuente KG Lego House al texto en h1 y p */
+    font-family: 'KG Lego House', sans-serif;
 }
 
 .special-text {
-    font-family: 'Eordeoghlakat', sans-serif; /* Aplica la fuente Eordeoghlakat a las palabras específicas */
+    font-family: 'Eordeoghlakat', sans-serif;
 }
 
 .red-text {
-    color: #ff0000; /* Aplica el color rojo a los textos */
+    color: #ff0000;
 }
 
 /* Estilo del pie de página */
