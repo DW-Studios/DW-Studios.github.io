@@ -1,97 +1,60 @@
-/* styles.css */
+/* Cargar fuentes personalizadas */
+@font-face {
+    font-family: 'KG Lego House';
+    src: url('fonts/KGLegoHouse.woff2') format('woff2'),
+         url('fonts/KGLegoHouse.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Alineación de logo y botones */
+.logo {
+    float: left;
+}
+
+.nav-buttons {
+    float: right;
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-buttons li {
+    display: inline;
+}
+
+.nav-buttons a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+    background-color: red;
+    border-radius: 5px;
+}
+
+/* Estilos generales */
 body {
-    font-family: 'KG Lego House', sans-serif;
     background-color: black;
     color: white;
-    margin: 0;
-    padding: 0;
-}
-
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-    background-color: #333;
-}
-
-.title-container {
-    display: flex;
-    align-items: center;
-}
-
-.title-image {
-    width: 150px;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-    margin: 0 15px;
-    font-weight: bold;
-}
-
-nav a:hover {
-    text-decoration: underline;
-}
-
-.dropdown {
-    position: relative;
-    display: inline-block;
-}
-
-.dropbtn {
-    background-color: #444;
-    color: white;
-    padding: 10px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-}
-
-.arrow {
-    margin-left: 10px;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #555;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-}
-
-.dropdown-content a {
-    color: white;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-}
-
-.dropdown-content a:hover {
-    background-color: #666;
-}
-
-.dropdown:hover .dropdown-content {
-    display: block;
+    font-family: 'KG Lego House', sans-serif;
 }
 
 footer {
+    margin-top: 50px;
+}
+
+/* Estilos de botones de redes sociales */
+.social-buttons {
+    list-style: none;
     display: flex;
     justify-content: center;
-    padding: 10px;
-    background-color: #333;
+    gap: 20px;
 }
 
-footer a {
-    color: white;
+.social-buttons a {
     text-decoration: none;
-    margin: 0 10px;
-}
-
-footer a:hover {
-    text-decoration: underline;
+    color: red;
+    font-size: 0.9em; /* Tamaño reducido */
+    padding: 5px 10px;
+    border: 1px solid red; /* Sin bordes circulares */
+    border-radius: 0;
 }
