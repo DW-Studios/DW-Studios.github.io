@@ -1,37 +1,36 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Noticias</title>
     <link rel="stylesheet" href="styles.css">
-    <style>
-        @font-face {
-            font-family: 'KG Lego House';
-            src: url('KGLegoHouse.woff2') format('woff2'),
-                 url('KGLegoHouse.woff') format('woff');
-            font-weight: normal;
-            font-style: normal;
-            font-display: swap;
-        }
-    </style>
 </head>
 <body>
     <header>
-        <img src="titulo.png" alt="Título" class="title-image">
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="news.html">News</a>
-            <a href="games.html">Games</a>
-        </nav>
+        <div class="title-container">
+            <img src="logo.png" alt="Logo" class="title-image">
+            <nav>
+                <a href="index.html#home">Home</a>
+                <a href="news.html">News</a>
+                <div class="dropdown">
+                    <button class="dropbtn">Games <span class="arrow">&#9660;</span></button>
+                    <div class="dropdown-content">
+                        <a href="game1.html">SlendyTUBBIES III Re-Worked</a>
+                        <a href="game2.html">Slendytubbies II (Fixed-Online)</a>
+                        <a href="game3.html">Error 53 (Remake)</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
     </header>
-    
     <main>
-        <section class="news-section">
-            <p>Perdón. No hay noticias nuevas aún n´u`n</p>
+        <section id="news" class="news-section">
+            <div class="news-content">
+                <p>Perdón. No hay noticias nuevas aún n´u`n</p>
+            </div>
         </section>
     </main>
-    
     <footer>
         <a href="https://youtube.com" target="_blank">YouTube</a>
         <a href="https://twitter.com" target="_blank">Twitter</a>
