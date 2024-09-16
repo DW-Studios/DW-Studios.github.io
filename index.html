@@ -1,32 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DW Studios OFFICIAL Site</title>
+    <title>Mi Página Web</title>
+    <link rel="stylesheet" href="styles.css">
     <style>
         @font-face {
             font-family: 'KG Lego House';
-            src: url('KGLegoHouse.woff2'); /* Reemplaza con la URL de la fuente */
-        }
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: 'LD Slender', sans-serif;
-            display: flex;
-            justify-content: flex-start;
-            align-items: center;
-            height: 100vh;
-            background-color: #000000; /* Ajusta el color de fondo si es necesario */
-        }
-        .header {
-            font-size: 2rem; /* Ajusta el tamaño de la fuente si es necesario */
-            padding: 1rem;
-            margin: 1rem;
+            src: url('KGLegoHouse.woff2') format('woff2'),
+                 url('KGLegoHouse.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
         }
     </style>
 </head>
 <body>
-    <div class="header">DW Studios OFFICIAL Site</div>
+    <header>
+        <img src="titulo.png" alt="Título" class="title-image">
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="news.html">News</a>
+            <a href="games.html">Games</a>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="home-section">
+            <h1>Hola a todos! Bienvenidos a nuestra página web oficial!</h1>
+            <p>Aquí se subirán <a href="news.html">noticias</a> sobre nuestros juegos como <span class="game-title">SlendyTUBBIES III Re-Worked</span>. Esperamos que te guste! :)</p>
+        </section>
+    </main>
+    
+    <footer>
+        <a href="https://youtube.com" target="_blank">YouTube</a>
+        <a href="https://twitter.com" target="_blank">Twitter</a>
+        <a href="https://gamejolt.com" target="_blank">Gamejolt</a>
+        <a href="https://github.com" target="_blank">GitHub</a>
+    </footer>
 </body>
 </html>
