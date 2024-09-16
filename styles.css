@@ -1,3 +1,12 @@
+@font-face {
+    font-family: 'KG Lego House';
+    src: url('Fonts/KGLegoHouse.woff2') format('woff2'),
+         url('Fonts/KGLegoHouse.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
 body {
     font-family: 'KG Lego House', sans-serif;
     background-color: black;
