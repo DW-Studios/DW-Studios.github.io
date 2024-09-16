@@ -110,6 +110,10 @@ h1, p {
     font-family: 'Eordeoghlakat', sans-serif; /* Aplica la fuente Eordeoghlakat a las palabras específicas */
 }
 
+.red-text {
+    color: #ff0000; /* Aplica el color rojo a los textos */
+}
+
 /* Estilo del pie de página */
 footer {
     position: fixed;
