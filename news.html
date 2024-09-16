@@ -1,42 +1,65 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Noticias</title>
+    <title>News</title>
     <link rel="stylesheet" href="styles.css">
     <style>
-        @font-face {
-            font-family: 'KG Lego House';
-            src: url('KGLegoHouse.woff2') format('woff2'),
-                 url('KGLegoHouse.woff') format('woff');
-            font-weight: normal;
-            font-style: normal;
-            font-display: swap;
+        body {
+            font-family: 'KG Lego House', sans-serif;
+            background-color: black;
+            color: white;
+        }
+        .nav-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            background-color: #222;
+        }
+        .nav-bar a {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+        }
+        footer {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            padding: 10px;
+            background-color: #222;
+        }
+        footer img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
         }
     </style>
 </head>
 <body>
-    <header>
-        <img src="titulo.png" alt="Título" class="title-image">
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="news.html">News</a>
-            <a href="games.html">Games</a>
-        </nav>
-    </header>
-    
-    <main>
-        <section class="news-section">
-            <p>Perdón. No hay noticias nuevas aún n´u`n</p>
-        </section>
-    </main>
-    
+    <div class="nav-bar">
+        <a href="index.html">Home</a>
+        <a href="news.html">News</a>
+        <div class="dropdown">
+            <a href="#">Games</a>
+            <div class="dropdown-content">
+                <a href="Slendytubbies3reworked.html">SlendyTUBBIES III Re-Worked</a>
+                <a href="Slendytubbies2FixedOnline.html">Slendytubbies II (Fixed-Online)</a>
+                <a href="Error53remake.html">Error 53 (Remake)</a>
+            </div>
+        </div>
+    </div>
+    <div>
+        <h1>Noticias</h1>
+        <p>Perdón. No hay noticias nuevas aún n´u`n</p>
+    </div>
     <footer>
-        <a href="https://youtube.com" target="_blank">YouTube</a>
-        <a href="https://twitter.com" target="_blank">Twitter</a>
-        <a href="https://gamejolt.com" target="_blank">Gamejolt</a>
-        <a href="https://github.com" target="_blank">GitHub</a>
+        <a href="https://youtube.com" target="_blank"><img src="Images/youtube.png" alt="YouTube"></a>
+        <a href="https://twitter.com" target="_blank"><img src="Images/twitter.png" alt="Twitter"></a>
+        <a href="https://gamejolt.com" target="_blank"><img src="Images/gamejolt.png" alt="Gamejolt"></a>
+        <a href="https://github.com" target="_blank"><img src="Images/github.png" alt="GitHub"></a>
+        <a href="https://discord.com" target="_blank"><img src="Images/discord.png" alt="Discord"></a>
     </footer>
 </body>
 </html>
