@@ -28,12 +28,13 @@ body {
 }
 
 a {
-    color: #00aeff; /* Color del enlace */
-    text-decoration: none; /* Quita el subrayado de los enlaces */
+    color: #00aeff;
+    text-decoration: none;
 }
 
 a:hover {
-    text-decoration: underline; /* Subrayado al pasar el ratón sobre el enlace */
+    color: #007bbf; /* Cambia el color cuando el enlace está en hover */
+    text-decoration: underline;
 }
 
 /* Estilo del encabezado */
