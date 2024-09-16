@@ -88,7 +88,7 @@ header nav a:hover {
 /* Mostrar el contenido del dropdown al hacer hover */
 .dropdown:hover .dropdown-content {
     display: block;
-    left: 0; /* Asegura que el dropdown se quede dentro de la pantalla */
+    left: 90; /* Asegura que el dropdown se quede dentro de la pantalla */
 }
 
 /* Estilo de los enlaces dentro del dropdown */
