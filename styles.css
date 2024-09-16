@@ -10,6 +10,8 @@
 /* Alineación de logo y botones */
 .logo {
     float: left;
+    max-width: 150px; /* Ajusta el tamaño del logo */
+    height: auto;     /* Mantiene las proporciones */
 }
 
 .nav-buttons {
@@ -43,11 +45,10 @@ footer {
 }
 
 /* Estilos de botones de redes sociales */
-.social-buttons {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
+.social-buttons a img {
+    width: 30px; /* Ajusta el tamaño de las imágenes */
+    height: auto;
+    border-radius: 0; /* Elimina bordes circulares */
 }
 
 .social-buttons a {
