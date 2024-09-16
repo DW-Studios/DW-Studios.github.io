@@ -7,6 +7,26 @@ body {
     color: #ffffff;
 }
 
+/* Define la fuente personalizada Eordeoghlakat */
+@font-face {
+    font-family: 'Eordeoghlakat';
+    src: url('Fonts/Eordeoghlakat.woff2') format('woff2'),
+         url('Fonts/Eordeoghlakat.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Define la fuente personalizada KG Lego House */
+@font-face {
+    font-family: 'KG Lego House';
+    src: url('Fonts/KGLegoHouse.woff2') format('woff2'),
+         url('Fonts/KGLegoHouse.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
 /* Estilo del encabezado */
 header {
     display: flex;
