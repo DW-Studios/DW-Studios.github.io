@@ -1,61 +1,69 @@
-/* Cargar fuentes personalizadas */
+/* Define la fuente personalizada */
 @font-face {
     font-family: 'KG Lego House';
-    src: url('Fonts/KGLegoHouse.woff2') format('woff2'),
-         url('Fonts/KGLegoHouse.woff') format('woff');
+    src: url('fonts/KGLegoHouse.woff2') format('woff2'),
+         url('fonts/KGLegoHouse.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 
-/* Alineación de logo y botones */
+/* Aplica la fuente personalizada al cuerpo de la página */
+body {
+    font-family: 'KG Lego House', sans-serif;
+    color: #fff; /* Color blanco para el texto */
+    background-color: #000; /* Fondo negro para la página */
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos para el encabezado */
+header {
+    background-color: #000; /* Fondo negro */
+    padding: 10px;
+}
+
 .logo {
-    float: left;
-    max-width: 150px; /* Ajusta el tamaño del logo */
-    height: auto;     /* Mantiene las proporciones */
+    height: 50px; /* Ajusta el tamaño del logo si es necesario */
 }
 
 .nav-buttons {
-    float: right;
     list-style: none;
-    display: flex;
-    gap: 20px;
+    padding: 0;
+    margin: 0;
 }
 
 .nav-buttons li {
     display: inline;
+    margin-right: 10px;
 }
 
 .nav-buttons a {
+    color: #f00; /* Color rojo para los enlaces en el menú */
     text-decoration: none;
-    color: white;
-    padding: 10px 20px;
-    background-color: red;
-    border-radius: 5px;
 }
 
-/* Estilos generales */
-body {
-    background-color: black;
-    color: white;
-    font-family: 'KG Lego House', sans-serif;
+/* Estilos para el contenido principal */
+main {
+    padding: 20px;
 }
 
+/* Estilos para el pie de página */
 footer {
-    margin-top: 50px;
+    background-color: #000; /* Fondo negro */
+    padding: 10px;
 }
 
-/* Estilos de botones de redes sociales */
-.social-buttons a img {
-    width: 30px; /* Ajusta el tamaño de las imágenes */
-    height: auto;
-    border-radius: 0; /* Elimina bordes circulares */
+.social-buttons {
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
-.social-buttons a {
-    text-decoration: none;
-    color: red;
-    font-size: 0.9em; /* Tamaño reducido */
-    padding: 5px 10px;
-    border: 1px solid red; /* Sin bordes circulares */
-    border-radius: 0;
+.social-buttons li {
+    display: inline;
+    margin-right: 10px;
+}
+
+.social-buttons img {
+    height: 30px; /* Ajusta el tamaño de los íconos sociales si es necesario */
 }
