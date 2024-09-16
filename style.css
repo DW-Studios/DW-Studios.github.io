@@ -1,42 +1,74 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'KG Lego House', sans-serif;
+    background-color: black;
+    color: white;
     margin: 0;
     padding: 0;
-    color: #333;
 }
 
 header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
     background-color: #333;
-    color: #fff;
-    padding: 10px 0;
-    text-align: center;
 }
 
-nav ul {
-    list-style: none;
-    padding: 0;
+.title-image {
+    width: 150px;
 }
 
-nav ul li {
-    display: inline;
-    margin: 0 10px;
-}
-
-nav ul li a {
-    color: #fff;
+nav a {
+    color: white;
     text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
 }
 
-section {
+nav a:hover {
+    text-decoration: underline;
+}
+
+main {
     padding: 20px;
 }
 
+.home-section, .news-section, .games-section {
+    margin: 20px 0;
+}
+
+.game-title {
+    color: red;
+}
+
 footer {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
     background-color: #333;
-    color: #fff;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+.game-button {
+    display: block;
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #444;
+    color: red;
+    text-decoration: none;
     text-align: center;
-    padding: 10px 0;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
+    font-weight: bold;
+}
+
+.game-button:hover {
+    background-color: #555;
 }
