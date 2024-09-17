@@ -1,18 +1,12 @@
-# Mi Página Web
+# Official DW Studios Website
 
-Este es un proyecto de ejemplo para GitHub Pages.
+First website
+## Structure
 
-## Estructura del Proyecto
+- `index.html`: Code and stuff for the website (Do not modify).
+- `style.css`: Page style file for the website style (Do not modify).
 
-- `index.html`: El archivo principal de la página web.
-- `style.css`: El archivo de estilos para la página.
+## How to use
 
-## Cómo Usar
-
-1. Clona el repositorio.
-2. Abre `index.html` en tu navegador para ver la página web.
-3. Personaliza los archivos según tus necesidades.
-
-## Contacto
-
-Puedes contactarnos en [contacto@example.com](mailto:contacto@example.com).
+1. The `Images` folder is for images like logos, banners and etc.
+2. The `Fonts` folder is for custom fonts. Only .woff and .woff2 extensions allowed.
