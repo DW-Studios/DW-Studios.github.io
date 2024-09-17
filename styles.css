@@ -112,6 +112,10 @@ header nav a:hover {
     font-family: 'Eordeoghlakat', sans-serif; /* Aplica la fuente personalizada Eordeoghlakat al contenido del dropdown */
 }
 
+.dropdown-content a.st2-text {
+    font-family: 'KG Lego House', sans-serif; /* Fuente especial para enlaces con clase 'special-text' */
+}
+
 /* Cambiar el fondo del enlace en hover */
 .dropdown-content a:hover {
     background-color: #575757;
