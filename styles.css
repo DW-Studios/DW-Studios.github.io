@@ -172,9 +172,9 @@ footer a:hover {
 }
 
 footer a img {
-    width: 24px; /* Ajusta el tamaño según sea necesario */
-    height: 24px; /* Mantiene la proporción de la imagen */
-    margin: 0 10px; /* Espaciado entre los íconos */
+    width: 48px; /* Ajusta el tamaño según sea necesario */
+    height: 48px; /* Mantiene la proporción de la imagen */
+    margin: 0 5px; /* Espaciado entre los íconos */
     border: none; /* Elimina el borde de los enlaces */
     border-radius: 0; /* Elimina los bordes redondeados */
 }
