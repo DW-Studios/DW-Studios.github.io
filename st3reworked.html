@@ -5,11 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Slendytubbies III Re-Worked</title>
     <style>
-        /* Fuente personalizada */
+        /* Fuente personalizada 'KG Lego House' */
         @font-face {
             font-family: 'KG Lego House';
             src: url('Fonts/KGLegoHouse.woff2') format('woff2'),
                  url('Fonts/KGLegoHouse.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        /* Otra fuente personalizada para el título */
+        @font-face {
+            font-family: 'CustomFontTitle';
+            src: url('Fonts/CustomFontTitle.woff2') format('woff2'),
+                 url('Fonts/CustomFontTitle.woff') format('woff');
             font-weight: normal;
             font-style: normal;
             font-display: swap;
@@ -49,8 +59,7 @@
             display: block;
             transition: color 0.5s;
             font-family: 'KG Lego House', Arial, sans-serif;
-            text-align: left; /* Alinea el texto a la izquierda */
-            margin-left: 0; /* Asegura que no haya margen a la izquierda */
+            text-align: left;
         }
 
         .sidenav a:hover {
@@ -61,7 +70,7 @@
             position: absolute;
             bottom: 20px;
             width: 100%;
-            text-align: left; /* Alinea el texto a la izquierda */
+            text-align: left;
             color: grey;
             font-family: 'KG Lego House', Arial, sans-serif;
         }
@@ -81,7 +90,7 @@
         .main-content h1 {
             margin: 20px 0;
             font-size: 48px;
-            font-family: 'KG Lego House', Arial, sans-serif;
+            font-family: 'CustomFontTitle', Arial, sans-serif;
         }
 
         .main-content h1 .red-text {
@@ -103,7 +112,7 @@
         /* Preguntas y respuestas */
         .qa-section h2 {
             font-size: 24px;
-            color: white;
+            color: red;
             margin-top: 20px;
         }
 
@@ -113,10 +122,16 @@
             margin: 5px 0 20px;
         }
 
+        /* Subtexto en gris */
         .qa-section p.subtext {
             font-size: 14px;
             color: grey;
             font-style: italic;
+        }
+
+        /* Color rojo para el número 3 en la primera pregunta */
+        .qa-section .highlight-red {
+            color: red;
         }
     </style>
 </head>
@@ -136,10 +151,9 @@
     <div class="main-content" style="margin-left: 220px; padding: 20px;">
         <img src="https://via.placeholder.com/800x400" alt="Imagen Principal">
         <h1>
-            <span class="white-text">Slendytubbies</span> 
-            <span class="red-text">III</span> 
-            <span class="white-text">Re-</span>
-            <span class="red-text">Worked</span>
+            <span class="red-text">Slendytubbies</span>
+            <span class="white-text">III</span>
+            <span class="red-text">Re-Worked</span>
         </h1>
         <p>Slendytubbies III Re-Worked es la remasterización no oficial del juego Slendytubbies 3 lanzado el 28/08/2017 creado por ZeoWorks.</p>
 
@@ -148,7 +162,7 @@
 
         <!-- Sección de preguntas y respuestas -->
         <div class="qa-section">
-            <h2>¿Qué es este proyecto de Slendytubbies <span class="red-text">3</span>?</h2>
+            <h2>¿Qué es este proyecto de Slendytubbies <span class="highlight-red">3</span>?</h2>
             <p>Este proyecto fue creado para darle una continuación al DLC cancelado y darle un final claro a la historia de Slendytubbies 3 original. Este juego incluirá logros en la campaña y DLC, mejoras, elementos de la beta no añadidos, cosas del DLC planeadas, y elementos nuevos para darle más coherencia a la historia, etc.</p>
 
             <h2>¿Cuánto progreso lleva el juego? ¿Es una DEMO?</h2>
