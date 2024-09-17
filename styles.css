@@ -114,6 +114,7 @@ header nav a:hover {
 
 .dropdown-content a.st2-text {
     font-family: 'True Lies', sans-serif; /* Fuente especial para enlaces con clase 'special-text' */
+    font-size: 18px
 }
 
 /* Cambiar el fondo del enlace en hover */
