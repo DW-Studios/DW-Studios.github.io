@@ -152,6 +152,10 @@ h1, p {
     color: #ff0000; /* Aplica el color rojo a los textos */
 }
 
+.white-text {
+    color: #ffffff;
+}
+
 /* Estilo para las redes sociales */
 .social-links {
     display: flex; /* Alinea los elementos en una fila horizontal */
