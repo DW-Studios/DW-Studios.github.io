@@ -152,6 +152,19 @@ h1, p {
     color: #ff0000; /* Aplica el color rojo a los textos */
 }
 
+/* Estilo para las redes sociales */
+.social-links {
+    display: flex; /* Alinea los elementos en una fila horizontal */
+    justify-content: center; /* Centra las imágenes horizontalmente */
+    margin-top: 20px; /* Espaciado por encima de las imágenes de redes sociales */
+}
+
+.social-icon {
+    width: 32px; /* Tamaño reducido para las imágenes */
+    height: 32px; /* Asegura que todas las imágenes mantengan el tamaño */
+    margin: 0 10px; /* Espaciado entre las imágenes */
+}
+
 /* Estilo del pie de página */
 footer {
     position: fixed;
