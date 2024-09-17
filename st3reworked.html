@@ -5,9 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Slendytubbies III Re-Worked</title>
     <style>
-        body {
+        /* Fuente personalizada */
+        @font-face {
+            font-family: 'KG Lego House';
+            src: url('Fonts/KGLegoHouse.woff2') format('woff2'),
+                 url('Fonts/KGLegoHouse.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        /* Aplicar la fuente personalizada a todo el contenido */
+        body, h1, p, a {
             margin: 0;
-            font-family: Arial, sans-serif;
+            font-family: 'KG Lego House', Arial, sans-serif;
             background-color: black;
             color: white;
             text-align: center;
@@ -36,8 +47,10 @@
             font-size: 18px;
             color: white;
             display: block;
-            text-align: center;
             transition: color 0.5s;
+            font-family: 'KG Lego House', Arial, sans-serif;
+            text-align: left; /* Alinea el texto a la izquierda */
+            margin-left: 0; /* Asegura que no haya margen a la izquierda */
         }
 
         .sidenav a:hover {
@@ -48,8 +61,9 @@
             position: absolute;
             bottom: 20px;
             width: 100%;
-            text-align: center;
+            text-align: left; /* Alinea el texto a la izquierda */
             color: grey;
+            font-family: 'KG Lego House', Arial, sans-serif;
         }
 
         .sidenav .discord-link:hover {
@@ -67,6 +81,7 @@
         .main-content h1 {
             margin: 20px 0;
             font-size: 48px;
+            font-family: 'KG Lego House', Arial, sans-serif;
         }
 
         .main-content h1 .red-text {
@@ -82,6 +97,7 @@
             color: grey;
             font-style: italic;
             margin: 10px 0;
+            font-family: 'KG Lego House', Arial, sans-serif;
         }
     </style>
 </head>
