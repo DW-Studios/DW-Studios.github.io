@@ -19,7 +19,7 @@
             position: fixed;
             left: 0;
             top: 0;
-            background-color: #111;
+            background-color: black; /* Color del fondo negro */
             padding-top: 20px;
         }
 
@@ -38,13 +38,12 @@
             color: white;
             display: block;
             text-align: center;
-            transition: background-color 0.5s, color 0.5s;
+            transition: color 0.5s; /* Solo transición de color */
         }
 
-        /* Hover efecto: transicion de blanco a rojo */
+        /* Hover efecto: transicion del color del texto de blanco a rojo */
         .sidenav a:hover {
-            background-color: red;
-            color: white;
+            color: red; /* El texto cambia a rojo */
         }
 
         /* Estilo del link de Discord */
