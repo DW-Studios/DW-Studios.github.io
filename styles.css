@@ -18,6 +18,15 @@
     font-display: swap;
 }
 
+@font-face {
+    font-family: 'True Lies';
+    src: url('Fonts/TrueLies.woff2') format('woff2'),
+        url('Fonts/TrueLies.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
 /* General styles */
 body {
     font-family: 'Arial', sans-serif; /* Fuente por defecto para todo el cuerpo */
@@ -126,8 +135,12 @@ h1, p {
     font-family: 'KG Lego House', sans-serif; /* Aplica la fuente KG Lego House al texto en h1 y p */
 }
 
-.special-text {
+.st3title-text {
     font-family: 'Eordeoghlakat', sans-serif; /* Aplica la fuente Eordeoghlakat a las palabras específicas */
+}
+
+.st2title-text {
+    font-family. 'TrueLies', sans-serif;
 }
 
 .red-text {
