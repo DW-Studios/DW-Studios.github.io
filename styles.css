@@ -53,8 +53,10 @@ header img {
 header nav {
     display: flex;
     gap: 10px;
+    align-items: center; /* Alinea todos los botones verticalmente en el centro */
 }
 
+/* Estilo de los enlaces del menú */
 header nav a {
     color: #ffffff;
     font-family: 'KG Lego House', sans-serif; /* Aplica la fuente KG Lego House a los botones del menú */
@@ -70,6 +72,7 @@ header nav a:hover {
 .dropdown {
     position: relative;
     display: inline-block;
+    vertical-align: middle; /* Alinea el dropdown con los demás elementos del menú */
 }
 
 /* Ajuste del dropdown para que no se corte */
@@ -149,4 +152,3 @@ footer a {
 footer a:hover {
     color: #cccccc;
 }
-/* waza */
