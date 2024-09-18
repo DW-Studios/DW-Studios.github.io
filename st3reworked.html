@@ -162,20 +162,23 @@
             display: flex;
             justify-content: center; /* Centra los botones horizontalmente */
             flex-wrap: nowrap; /* Evita que los botones se envuelvan en una nueva línea */
-            margin: 0 auto;
-            gap: 2px; /* Reduce el espacio entre los botones */
+            margin: 0; /* Elimina márgenes adicionales */
+            padding: 0; /* Elimina padding adicional */
+            gap: 0; /* No hay espacio entre los botones */
         }
 
+        /* Estilos para las imágenes y sus gifs al hacer hover */
+        .image-buttons img {
+            width: 80px; /* Ajusta el tamaño de los botones según sea necesario */
+            height: auto;
+            margin: 0; /* Elimina márgenes adicionales de las imágenes */
+            padding: 0; /* Elimina padding adicional de las imágenes */
+            transition: 0.5s;
+        }
 
         /* Estilos para las imágenes y sus gifs al hacer hover */
         .image-buttons a {
             display: inline-block;
-        }
-
-        .image-buttons img {
-            max-width: 40%; /* Mantener el tamaño original de la segunda imagen */
-            height: auto;
-            transition: 0.5s;
         }
 
         /* Botón 1: imagen y GIF */
