@@ -43,7 +43,7 @@
             top: 0;
             background-color: black;
             padding-top: 20px;
-            z-index: -2; /* Aseguramos que los botones estén al frente */
+            z-index: 1; /* Aseguramos que los botones estén al frente */
         }
 
         /* Botones del Side Nav */
@@ -57,6 +57,7 @@
             font-family: 'KG Lego House', Arial, sans-serif;
             text-align: left;
             margin-top: 5px; /* Espacio ajustado */
+            z-index: 1; /* Aseguramos que los botones estén al frente */
         }
 
         /* Efecto hover de los botones */
@@ -86,7 +87,7 @@
             position: absolute;
             left: -50px; /* Desplazar más la imagen hacia la izquierda */
             top: -50px; /* Ajuste de la posición vertical, más hacia arriba */
-            z-index: 3; /* Detrás de los botones */
+            z-index: -3; /* Detrás de los botones */
         }
 
         /* Estilos para la imagen en el body */
