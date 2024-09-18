@@ -18,8 +18,8 @@
         /* Otra fuente personalizada para el título */
         @font-face {
             font-family: 'Eordeoghlakat';
-            src: url('Fonts/Eordeoghlakat.woff.woff2') format('woff2'),
-                 url('Fonts/Eordeoghlakat.woff.woff') format('woff');
+            src: url('Fonts/Eordeoghlakat.woff2') format('woff2'),
+                 url('Fonts/Eordeoghlakat.woff') format('woff');
             font-weight: normal;
             font-style: normal;
             font-display: swap;
@@ -148,6 +148,37 @@
         .qa-section .highlight-red {
             color: red;
         }
+
+        /* Estilos para el texto adicional en la fuente Eordeoghlakat */
+        .additional-text {
+            font-family: 'Eordeoghlakat', Arial, sans-serif;
+            font-size: 24px;
+            color: white;
+            margin-top: 40px;
+        }
+
+        /* Contenedor de las imágenes-botones */
+        .image-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        /* Estilos para las imágenes y sus gifs al hacer hover */
+        .image-buttons a {
+            display: inline-block;
+        }
+
+        .image-buttons img {
+            width: 150px;
+            height: 150px;
+            transition: 0.5s;
+        }
+
+        .image-buttons img:hover {
+            content: url('Images/Gifs/gamejolt.gif');
+        }
     </style>
 </head>
 <body>
@@ -192,7 +223,22 @@
             <h2>¿Se puede descargar?</h2>
             <p>¡Claro que sí! Puedes encontrar el link de descarga abajo de esta pregunta.</p>
         </div>
-    </div>
 
+        <!-- Texto adicional con fuente Eordeoghlakat -->
+        <div class="additional-text">
+            ¡Gracias por tu interés en nuestro proyecto! ¿Quieres saber más?
+        </div>
+
+        <!-- Imágenes-botones que cambian a gifs al hacer hover -->
+        <div class="image-buttons">
+            <a href="https://example.com" target="_blank">
+                <img src="Images/ReWorkedTexts/Gamejolt.png" alt="Botón 1">
+            </a>
+            <a href="https://example.com" target="_blank">
+                <img src="Images/Buttons/button2.png" alt="Botón 2">
+            </a>
+        </div>
+    </div>
+    
 </body>
 </html>
