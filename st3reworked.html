@@ -82,18 +82,26 @@
             color: lightgrey;
         }
 
-        /* Estilos para la imagen en el body */
+        /* Estilos para la imagen principal */
         .main-content .main-image {
             max-width: 100%; /* Ajustamos el tamaño de la primera imagen */
             height: auto;
             margin-top: 50px;
         }
 
-        /* Estilos para la segunda imagen en el body */
-        .main-content .secondary-image {
-            max-width: 40%; /* Mantener el tamaño original de la segunda imagen */
+        /* Estilos para la imagen secundaria con efecto hover */
+        .image-container {
+            width: 40%; /* Tamaño de la imagen */
             height: auto;
             margin-top: 20px;
+            background-image: url('Images/acercadeljuego.png'); /* Imagen por defecto */
+            background-size: cover;
+            background-position: center;
+            transition: background-image 0.5s ease-in-out; /* Suavizar el cambio de imagen */
+        }
+
+        .image-container:hover {
+            background-image: url('Images/Gifs/acercadeljuego.gif'); /* Imagen de hover */
         }
 
         /* Estilos para el texto principal */
@@ -118,21 +126,6 @@
             font-size: 17px;
             margin: 10px 0;
             font-family: 'KG Lego House', Arial, sans-serif;
-        }
-
-        /* Estilos para la imagen secundaria con efecto hover */
-        .image-container {
-            width: 40%; /* Tamaño de la imagen */
-            height: auto;
-            margin-top: 20px;
-            background-image: url('Images/ReWorkedTexts/Acercadeljuego.png'); /* Imagen por defecto */
-            background-size: cover;
-            background-position: center;
-            transition: background-image 0.5s ease-in-out; /* Suavizar el cambio de imagen */
-        }
-
-        .image-container:hover {
-            background-image: url('Images/Gifs/acercadeljuego.gif'); /* Imagen de hover */
         }
 
         /* Preguntas y respuestas */
@@ -237,7 +230,9 @@
         </h1>
         <p><strong>Slendytubbies III Re-Worked</strong> es la remasterización no oficial del juego Slendytubbies 3 lanzado el 28/08/2017 creado por ZeoWorks.</p>
 
+        <!-- Imagen secundaria con efecto hover -->
         <div class="image-container"></div>
+        
         <p>¡Hola! Aqui DW o mejor conocido anteriormente como "DekerWin". Si es la primera vez que te encuentras con este proyecto, talvez tengas dudas o etc. Yo responderé algunas generales y otras las puedo responder en Discord junto con mi equipo de moderadores.</p>
 
         <!-- Sección de preguntas y respuestas -->
