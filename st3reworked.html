@@ -43,12 +43,19 @@
             top: 0;
             background-color: black;
             padding-top: 20px;
-            z-index: 1; /* Aseguramos que los botones estén al frente */
         }
 
-        /* Botones del Side Nav */
+        .sidenav img {
+            display: block;
+            margin: 0 auto 20px;
+            width: 100%; /* Hacemos que el GIF sea más grande */
+            max-width: 300px; /* Limitar el tamaño máximo del GIF */
+            position: relative;
+            left: -50px; /* Desplazar la imagen hacia la izquierda fuera de la pantalla */
+        }
+
         .sidenav a {
-            padding: 10px 20px;
+            padding: 15px 20px;
             text-decoration: none;
             font-size: 18px;
             color: white;
@@ -56,17 +63,12 @@
             transition: color 0.5s;
             font-family: 'KG Lego House', Arial, sans-serif;
             text-align: left;
-            margin-top: 10px;
-            top: 60px; /* Espacio ajustado */
-            z-index: 1; /* Aseguramos que los botones estén al frente */
         }
 
-        /* Efecto hover de los botones */
         .sidenav a:hover {
             color: red;
         }
 
-        /* Link de Discord al final del menú */
         .sidenav .discord-link {
             position: absolute;
             bottom: 20px;
@@ -78,17 +80,6 @@
 
         .sidenav .discord-link:hover {
             color: lightgrey;
-        }
-
-        .sidenav img {
-            display: block;
-            margin: 0 auto 20px;
-            width: 150%; /* Imagen más grande */
-            max-width: 450px; /* Limitar el tamaño máximo */
-            position: absolute;
-            left: -50px; /* Desplazar más la imagen hacia la izquierda */
-            top: -50px; /* Ajuste de la posición vertical, más hacia arriba */
-            z-index: -3; /* Detrás de los botones */
         }
 
         /* Estilos para la imagen en el body */
