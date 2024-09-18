@@ -48,10 +48,10 @@
         .sidenav img {
             display: block;
             margin: 0 auto 50px;
-            width: 120%; /* Hacemos que el GIF sea más grande */
-            max-width: 500px; /* Limitar el tamaño máximo del GIF */
+            width: 120%;
+            max-width: 500px;
             position: relative;
-            left: -18px; /* Desplazar la imagen hacia la izquierda fuera de la pantalla */
+            left: -18px;
         }
 
         .sidenav a {
@@ -83,10 +83,17 @@
         }
 
         /* Estilos para la imagen en el body */
-        .main-content img {
-            max-width: 40%;
+        .main-content .main-image {
+            max-width: 100%; /* Ajustamos el tamaño de la primera imagen */
             height: auto;
             margin-top: 50px;
+        }
+
+        /* Estilos para la segunda imagen en el body */
+        .main-content .secondary-image {
+            max-width: 40%; /* Mantener el tamaño original de la segunda imagen */
+            height: auto;
+            margin-top: 20px;
         }
 
         /* Estilos para el texto principal */
@@ -151,21 +158,21 @@
         <a href="#resumen">Resumen</a>
         <a href="#acerca">Acerca del juego</a>
         <a href="#descargar">Descargar</a>
-        <a href="https://dw-studios.github.io/">Volver a la página principal</a> <!-- Enlace actualizado -->
+        <a href="https://dw-studios.github.io/">Volver a la página principal</a>
         <a href="https://discord.com" class="discord-link">Discord Oficial</a>
     </div>
 
     <!-- Contenido Principal -->
     <div class="main-content" style="margin-left: 220px; padding: 20px;">
-        <img src="https://via.placeholder.com/800x400" alt="Imagen Principal">
+        <img src="https://via.placeholder.com/800x400" alt="Imagen Principal" class="main-image">
         <h1 style="font-weight: normal;">
-             <span class="white-text">Slendytubbies</span>
+            <span class="white-text">Slendytubbies</span>
             <span class="red-text">III</span>
             <span class="white-text">Re-</span><span class="red-text">Worked</span>
         </h1>
         <p><strong>Slendytubbies III Re-Worked</strong> es la remasterización no oficial del juego Slendytubbies 3 lanzado el 28/08/2017 creado por ZeoWorks.</p>
 
-        <img src="Images/Gifs/acercadeljuego.gif" style="margin-top: 20px;">
+        <img src="Images/Gifs/acercadeljuego.gif" alt="Acerca del juego" class="secondary-image">
         <p>¡Hola! Aqui DW o mejor conocido anteriormente como "DekerWin". Si es la primera vez que te encuentras con este proyecto, talvez tengas dudas o etc. Yo responderé algunas generales y otras las puedo responder en Discord junto con mi equipo de moderadores.</p>
 
         <!-- Sección de preguntas y respuestas -->
