@@ -170,14 +170,24 @@
             display: inline-block;
         }
 
-        .image-buttons img {
+        .image-buttons .GamejoltImage {
             width: 120%;
             max-width: 500px;
             transition: 0.5s;
         }
 
-        .image-buttons img:hover {
+        .image-buttons .MediafireImage {
+            width: 120%;
+            max-width: 500px;
+            transition: 0.5s;
+        }
+
+        .image-buttons GamejoltImage:hover {
             content: url('Images/Gifs/gamejolt.gif');
+        }
+        
+        .image-buttons MediafireImage:hover {
+            content: url('Images/Gifs/mediafire.gif');
         }
     </style>
 </head>
@@ -232,10 +242,10 @@
         <!-- Imágenes-botones que cambian a gifs al hacer hover -->
         <div class="image-buttons">
             <a href="https://example.com" target="_blank">
-                <img src="Images/ReWorkedTexts/Gamejolt.png" alt="Botón 1">
+                <img src="Images/ReWorkedTexts/Gamejolt.png" alt="Botón 1" class="GamejoltImage">
             </a>
             <a href="https://example.com" target="_blank">
-                <img src="Images/Buttons/button2.png" alt="Botón 2">
+                <img src="Images/ReWorkedTexts/Mediafire" alt="Botón 1" class="MediafireImage">
             </a>
         </div>
     </div>
