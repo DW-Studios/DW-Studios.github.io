@@ -160,16 +160,16 @@
         /* Contenedor de las imágenes-botones */
         .image-buttons {
             display: flex;
-            justify-content: center; /* Centra los botones horizontalmente */
-            flex-wrap: nowrap; /* Evita que los botones se envuelvan en una nueva línea */
+            flex-direction: column; /* Cambiado para apilar los botones verticalmente */
+            align-items: center; /* Centra los botones horizontalmente */
+            gap: 10px; /* Espacio entre los botones */
             margin: 0; /* Elimina márgenes adicionales */
             padding: 0; /* Elimina padding adicional */
-            gap: 0; /* No hay espacio entre los botones */
         }
 
-        /* Estilos para las imágenes y sus gifs al hacer hover */
+        /* Estilos para las imágenes de los botones */
         .image-buttons img {
-            width: 40%; /* Ajusta el tamaño de los botones según sea necesario */
+            width: 60%; /* Ajusta el tamaño de los botones según sea necesario */
             height: auto;
             margin: 0; /* Elimina márgenes adicionales de las imágenes */
             padding: 0; /* Elimina padding adicional de las imágenes */
