@@ -149,7 +149,7 @@
             color: red;
         }
 
-        /* Estilos para el texto adicional en la fuente Eordeoghlakat */
+        /* Estilos para el texto adicional con fuente Eordeoghlakat */
         .additional-text {
             font-family: 'Eordeoghlakat', Arial, sans-serif;
             font-size: 24px;
@@ -170,23 +170,27 @@
             display: inline-block;
         }
 
-        .image-buttons .GamejoltImage {
-            width: 120%;
-            max-width: 500px;
+        .image-buttons img {
+            width: 150px;
+            height: 150px;
             transition: 0.5s;
         }
 
-        .image-buttons .MediafireImage {
-            width: 120%;
-            max-width: 500px;
-            transition: 0.5s;
+        /* Botón 1: imagen y GIF */
+        .image-buttons #button1 img {
+            content: url('Images/ReWorkedTexts/Gamejolt.png');
         }
 
-        .image-buttons GamejoltImage:hover {
+        .image-buttons #button1 img:hover {
             content: url('Images/Gifs/gamejolt.gif');
         }
-        
-        .image-buttons MediafireImage:hover {
+
+        /* Botón 2: imagen y GIF */
+        .image-buttons #button2 img {
+            content: url('Images/ReWorkedTexts/Mediafire.png');
+        }
+
+        .image-buttons #button2 img:hover {
             content: url('Images/Gifs/mediafire.gif');
         }
     </style>
@@ -239,16 +243,16 @@
             ¡Gracias por tu interés en nuestro proyecto! ¿Quieres saber más?
         </div>
 
-        <!-- Imágenes-botones que cambian a gifs al hacer hover -->
+        <!-- Botones con imágenes y gifs -->
         <div class="image-buttons">
-            <a href="https://example.com" target="_blank">
-                <img src="Images/ReWorkedTexts/Gamejolt.png" alt="Botón 1" class="GamejoltImage">
+            <a id="button1" href="https://example.com" target="_blank">
+                <img src="Images/ReWorkedTexts/Gamejolt.png" alt="Botón 1">
             </a>
-            <a href="https://example.com" target="_blank">
-                <img src="Images/ReWorkedTexts/Mediafire" alt="Botón 1" class="MediafireImage">
+            <a id="button2" href="https://example.com" target="_blank">
+                <img src="Images/ReWorkedTexts/Mediafire.png" alt="Botón 2">
             </a>
         </div>
     </div>
-    
+
 </body>
 </html>
