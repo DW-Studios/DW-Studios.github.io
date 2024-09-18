@@ -160,10 +160,12 @@
         /* Contenedor de las imágenes-botones */
         .image-buttons {
             display: flex;
-            justify-content: space-around;
-            gap: 0 auto;
-            margin: 0 auto 0px;
+            justify-content: space-around; /* Ajusta el espacio entre los botones */
+            flex-wrap: wrap; /* Permite que los botones se envuelvan en líneas si el espacio es limitado */
+            margin: 0 auto;
+            gap: 10px; /* Ajusta el valor aquí si deseas más o menos separación */
         }
+
 
         /* Estilos para las imágenes y sus gifs al hacer hover */
         .image-buttons a {
