@@ -265,5 +265,29 @@
             </a>
         </div>
     </div>
+
+    <script>
+        // Función para reproducir un sonido
+        function playSound(audioFile) {
+            const audio = new Audio(audioFile);
+            audio.play();
+        }
+
+        // Obtener todos los enlaces del side nav
+        const navLinks = document.querySelectorAll('.sidenav a');
+
+        // Agregar los eventos hover y click
+        navLinks.forEach(link => {
+            // Reproducir sonido cuando el mouse pasa sobre el enlace
+            link.addEventListener('mouseenter', () => {
+                playSound('Sounds/Select.wav');
+            });
+
+            // Reproducir sonido cuando se hace clic en el enlace
+            link.addEventListener('click', () => {
+                playSound('Sounds/Click.wav');
+            });
+        });
+    </script>
 </body>
 </html>
