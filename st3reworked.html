@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slendytubbies III Re-Worked</title>
+    <link rel="icon" href="Images/Web/mini-logo.png" type="image/png">
+    <style>
+        /* Fuente personalizada 'KG Lego House' */
+        @font-face {
+            font-family: 'KG Lego House';
+            src: url('Fonts/KGLegoHouse.woff2') format('woff2'),
+                 url('Fonts/KGLegoHouse.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        /* Otra fuente personalizada para el título */
+        @font-face {
+            font-family: 'Eordeoghlakat';
+            src: url('Fonts/Eordeoghlakat.woff2') format('woff2'),
+                 url('Fonts/Eordeoghlakat.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        /* Aplicar la fuente personalizada a todo el contenido */
+        body, h1, h2, h3, p, a {
+            margin: 0;
+            font-family: 'KG Lego House', Arial, sans-serif;
+            background-color: black;
+            color: white;
+            text-align: center;
+        }
+
+        /* Estilos para el Side Nav */
+        .sidenav {
+            height: 100%;
+            width: 200px;
+            position: fixed;
+            left: 0;
+            top: 0;
+            background-color: black;
+            padding-top: 20px;
+        }
+
+        .sidenav img {
+            display: block;
+            margin: 0 auto 50px;
+            width: 120%;
+            max-width: 500px;
+            position: relative;
+            left: -18px;
+        }
+
+        .sidenav a {
+            padding: 15px 20px;
+            text-decoration: none;
+            font-size: 22px;
+            color: white;
+            display: block;
+            transition: color 0.5s;
+            font-family: 'KG Lego House', Arial, sans-serif;
+            text-align: left;
+        }
+
+        .sidenav a:hover {
+            color: red;
+        }
+
+        .sidenav .discord-link {
+            position: absolute;
+            bottom: 20px;
+            width: 100%;
+            text-align: left;
+            color: grey;
+            font-family: 'KG Lego House', Arial, sans-serif;
+        }
+
+        .sidenav .discord-link:hover {
+            color: lightgrey;
+        }
+
+        /* Estilos para la imagen en el body */
+        .main-content .main-image {
+            max-width: 80%; /* Ajustamos el tamaño de la primera imagen */
+            height: auto;
+            margin-top: 50px;
+        }
+
+        /* Estilos para la segunda imagen en el body */
+        .main-content .secondary-image {
+            max-width: 40%; /* Mantener el tamaño original de la segunda imagen */
+            height: auto;
+            margin-top: 20px;
+        }
+
+        /* Estilos para el texto principal */
+        .main-content h1 {
+            margin: 10px 0;
+            font-size: 48px;
+            font-family: 'Eordeoghlakat', Arial, sans-serif;
+        }
+
+        .main-content h1 .red-text {
+            color: red;
+        }
+
+        .main-content h1 .white-text {
+            color: white;
+        }
+
+        /* Estilo para el subtexto en gris y cursiva */
+        .main-content p {
+            color: grey;
+            font-style: italic;
+            font-size: 17px;
+            margin: 10px 0;
+            font-family: 'KG Lego House', Arial, sans-serif;
+        }
+
+        /* Preguntas y respuestas */
+        .qa-section h2 {
+            font-size: 30px;
+            color: white;
+            margin-top: 20px;
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        .qa-section p {
+            font-size: 22px;
+            color: #cfcfcf;
+            margin: 5px 0 20px;
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        /* Subtexto en gris */
+        .qa-section p.subtext {
+            font-size: 14px;
+            color: grey;
+            font-style: italic;
+        }
+
+        /* Color rojo para el número 3 en la primera pregunta */
+        .qa-section .highlight-red {
+            color: red;
+        }
+
+        /* Estilos para el texto adicional con fuente Eordeoghlakat */
+        .additional-text {
+            font-family: 'Eordeoghlakat', Arial, sans-serif;
+            font-size: 50px;
+            color: white;
+            margin-top: 40px;
+        }
+
+        /* Contenedor de las imágenes-botones */
+        .image-buttons {
+            display: flex;
+            flex-direction: column; /* Cambiado para apilar los botones verticalmente */
+            align-items: center; /* Centra los botones horizontalmente */
+            gap: 10px; /* Espacio entre los botones */
+            margin: 0; /* Elimina márgenes adicionales */
+            padding: 0; /* Elimina padding adicional */
+        }
+
+        /* Estilos para las imágenes de los botones */
+        .image-buttons img {
+            width: 40%; /* Ajusta el tamaño de los botones según sea necesario */
+            height: auto;
+            margin: 0; /* Elimina márgenes adicionales de las imágenes */
+            padding: 0; /* Elimina padding adicional de las imágenes */
+            transition: 0.5s;
+        }
+
+        /* Estilos para las imágenes y sus gifs al hacer hover */
+        .image-buttons a {
+            display: inline-block;
+        }
+
+        /* Botón 1: imagen y GIF */
+        .image-buttons #button1 img {
+            content: url('Images/ReWorkedTexts/Gamejolt.png');
+        }
+
+        .image-buttons #button1 img:hover {
+            content: url('Images/Gifs/gamejolt.gif');
+        }
+
+        /* Botón 2: imagen y GIF */
+        .image-buttons #button2 img {
+            content: url('Images/ReWorkedTexts/Mediafire.png');
+        }
+
+        .image-buttons #button2 img:hover {
+            content: url('Images/Gifs/mediafire.gif');
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Side Nav -->
+    <div class="sidenav">
+        <img src="Images/Gifs/TitleReWorked.gif" alt="Slendytubbies III Logo">
+        <a href="#resumen">Resumen</a>
+        <a href="#acerca">Acerca del juego</a>
+        <a href="#descargar">Descargar</a>
+        <a href="reworkedupdates.html">Historial de Actualizaciónes</a>
+        <a href="home.html">Volver a la página principal</a>
+        <a href="https://discord.gg/R8enA5NWUS" class="discord-link">Discord Oficial</a>
+    </div>
+
+    <!-- Contenido Principal -->
+    <div class="main-content" style="margin-left: 220px; padding: 20px;">
+        <!-- Sección para Resumen -->
+        <div id="resumen">
+            <img src="Images/ReWorkedTexts/ReWorkedImage.png" alt="Imagen Principal" class="main-image">
+            <h1 style="font-weight: normal;">
+                <span class="white-text">Slendytubbies</span>
+                <span class="red-text">III</span>
+                <span class="white-text">Re-</span><span class="red-text">Worked</span>
+            </h1>
+            <p><strong>Slendytubbies III Re-Worked</strong> es la remasterización no oficial del juego Slendytubbies 3 lanzado el 28/08/2017 creado por ZeoWorks.</p>
+        </div>
+
+        <!-- Sección para Acerca del juego -->
+        <div id="acerca">
+            <img src="Images/ReWorkedTexts/Acercadeljuego.png" alt="Acerca del juego" class="secondary-image">
+            <p>¡Hola! Aquí DW o mejor conocido anteriormente como "DekerWin". Si es la primera vez que te encuentras con este proyecto, quizás tengas dudas o preguntas. Yo responderé algunas generales y otras las puedo responder en Discord junto con mi equipo de moderadores.</p>
+        </div>
+
+        <!-- Sección de preguntas y respuestas -->
+        <div class="qa-section">
+            <h2>¿Qué es este proyecto de Slendytubbies <span class="highlight-red">III</span>?</h2>
+            <p>Este proyecto fue creado para darle una continuación al DLC cancelado y darle un final claro a la historia de Slendytubbies 3 original. Este juego incluirá logros en la campaña y DLC, mejoras, elementos de la beta no añadidos, cosas del DLC planeadas, y elementos nuevos para darle más coherencia a la historia, etc.</p>
+
+            <h2>¿Cuánto progreso lleva el juego? ¿Es una DEMO?</h2>
+            <p>Pues, el juego en su estado actual con la campaña terminada representa solo un 30% del juego completo. Y sí, lo considero como una demo porque aún queda mucho por terminar.</p>
+
+            <h2>¿Desde cuándo se lleva desarrollando este juego/proyecto?</h2>
+            <p>Lleva aproximadamente desde junio de 2022, aunque se pausó. Prácticamente, el desarrollo continuó desde finales de 2022 e inicios de 2023.</p>
+
+            <h2>¿Hay streams de desarrollo del juego?</h2>
+            <p>¡Claro que sí! (aunque no son diarios ni semanales). Puedes encontrarlos en mi canal de YouTube, que está en la página principal.</p>
+
+            <h2>¿Se puede descargar?</h2>
+            <p>¡Claro que sí! Puedes encontrar el link de descarga abajo de esta pregunta.</p>
+        </div>
+
+        <!-- Texto adicional con fuente Eordeoghlakat -->
+        <div class="additional-text">
+            Descargar
+        </div>
+
+        <!-- Botones con imágenes y gifs -->
+        <div class="image-buttons" id="descargar">
+            <a id="button1" href="https://gamejolt.com/games/s3-reworked-full/902663" target="_blank">
+                <img src="Images/ReWorkedTexts/Gamejolt.png" alt="Botón 1">
+            </a>
+            <a id="button2" href="https://example.comxd" target="_blank">
+                <img src="Images/ReWorkedTexts/Mediafire.png" alt="Botón 2">
+            </a>
+        </div>
+    </div>
+
+    <script>
+        // Función para reproducir un sonido
+        function playSound(audioFile) {
+            const audio = new Audio(audioFile);
+            audio.play();
+        }
+
+        // Obtener todos los enlaces del side nav
+        const navLinks = document.querySelectorAll('.sidenav a');
+
+        // Agregar los eventos hover y click
+        navLinks.forEach(link => {
+            // Reproducir sonido cuando el mouse pasa sobre el enlace
+            link.addEventListener('mouseenter', () => {
+                playSound('Sounds/Select.wav');
+            });
+
+            // Reproducir sonido cuando se hace clic en el enlace
+            link.addEventListener('click', () => {
+                playSound('Sounds/Click.wav');
+            });
+        });
+    </script>
+</body>
+</html>
+

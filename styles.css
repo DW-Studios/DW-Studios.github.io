@@ -1,0 +1,295 @@
+/* Define la fuente personalizada Eordeoghlakat */
+@font-face {
+    font-family: 'Eordeoghlakat';
+    src: url('Fonts/Eordeoghlakat.woff2') format('woff2'),
+         url('Fonts/Eordeoghlakat.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Define la fuente personalizada KG Lego House */
+@font-face {
+    font-family: 'KG Lego House';
+    src: url('Fonts/KGLegoHouse.woff2') format('woff2'),
+         url('Fonts/KGLegoHouse.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'True Lies';
+    src: url('Fonts/TrueLies.woff2') format('woff2'),
+        url('Fonts/TrueLies.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* General styles */
+body {
+    font-family: 'Arial', sans-serif; /* Fuente por defecto para todo el cuerpo */
+    margin: 0;
+    padding: 0;
+    background-color: #000000; /* Fondo negro */
+    color: #ffffff; /* Texto blanco por defecto */
+}
+
+a {
+    color: #00aeff;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #007bbf; /* Cambia el color cuando el enlace está en hover */
+    text-decoration: underline;
+}
+
+/* Estilo del encabezado */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #333333;
+    padding: 20px 40px; /* Aumenta el padding para un header más grande */
+    height: 60px; /* Ajusta la altura del header */
+}
+
+
+header img {
+    height: 41px; /* Ajusta la altura de la imagen del título */
+}
+
+header nav {
+    display: flex;
+    gap: 10px;
+    align-items: center; /* Alinea todos los botones verticalmente en el centro */
+}
+
+/* Estilo de los enlaces del menú */
+header nav a {
+    color: #ffffff;
+    font-family: 'KG Lego House', sans-serif; /* Aplica la fuente KG Lego House a los botones del menú */
+    padding: 10px;
+    text-transform: uppercase;
+}
+
+header nav a:hover {
+    color: #cccccc; /* Cambia el color al pasar el ratón */
+}
+
+/* Asegura que el dropdown esté relativo al contenedor */
+.dropdown {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle; /* Alinea el dropdown con los demás elementos del menú */
+}
+
+/* Ajuste del dropdown para que no se corte */
+.dropdown .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #333333;
+    min-width: 160px;
+    max-width: 100vw; /* Limita el ancho máximo del dropdown al tamaño de la ventana */
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    left: auto; /* Resetea la posición izquierda */
+    right: 0; /* Asegura que el dropdown quede alineado a la derecha */
+    overflow: hidden; /* Evita que se desborde el contenido */
+}
+
+/* Mostrar el contenido del dropdown al hacer hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Estilo de los enlaces dentro del dropdown */
+.dropdown-content a {
+    color: #ffffff;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-family: 'Eordeoghlakat', sans-serif; /* Aplica la fuente personalizada Eordeoghlakat al contenido del dropdown */
+}
+
+.dropdown-content a.st2-text {
+    font-family: 'True Lies', sans-serif; /* Fuente especial para enlaces con clase 'special-text' */
+    font-size: 13px
+}
+
+/* Cambiar el fondo del enlace en hover */
+.dropdown-content a:hover {
+    background-color: #575757;
+}
+
+/* Ajuste para pantallas pequeñas */
+@media (max-width: 600px) {
+    .dropdown .dropdown-content {
+        right: 0; /* Si la pantalla es pequeña, posiciona el dropdown en el borde derecho */
+        left: auto; /* Evita que se desplace fuera de la pantalla en pantallas pequeñas */
+    }
+}
+
+/* Estilo del contenido principal */
+main {
+    padding: 20px;
+    text-align: center; /* Centra el texto en la página principal */
+}
+
+h2 {
+    text-align: center; /* Centra el texto */
+    font-size: 3rem;
+    color: #fff;
+    font-weight: 600;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    margin-bottom: 20px;
+    background-color: rgba(0, 0, 0, 0.6); /* Fondo oscuro semi-transparente */
+    padding: 20px; /* Espacio alrededor del texto */
+    border-radius: 10px; /* Bordes redondeados */
+    border: 3px solid #fff; /* Borde blanco */
+}
+
+
+
+h4 {
+    text-align: center;
+    font-size: 2rem; /* Aumento del tamaño de la fuente */
+    color: #ffffff; /* Color verde agua */
+    font-weight: 800; /* Fuente más pesada */
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6); /* Sombra más difusa */
+    margin-bottom: 30px; /* Más espacio debajo */
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 5px;
+    border-radius: 15px; /* Bordes redondeados más grandes */
+    border: 5px solid #710000; /* Borde del mismo color */
+}
+
+
+
+
+img {
+    display: block;
+    margin: 30px auto; /* Centra la imagen */
+    max-width: 80%; /* Ajusta el tamaño máximo de la imagen */
+    height: auto;
+    border-radius: 15px; /* Bordes redondeados */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Sombra suave */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición para efectos */
+}
+
+section {
+    padding: 50px;
+    text-align: left;
+    margin: 0 15%;
+    background-color: #1c1c1c;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+    border: 2px solid #fff; 
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap'); /* Fuente estilo pixel */
+
+.marquee {
+    font-family: 'Press Start 2P', cursive; /* Fuente pixel art para estilo de videojuego */
+    font-size: 24px; /* Tamaño de texto ajustado */
+    font-weight: 600; /* Texto ligeramente más grueso */
+    color: #b10303; /* Color rojo brillante para el texto */
+    text-transform: uppercase; /* Convierte el texto a mayúsculas */
+    letter-spacing: 2px; /* Espaciado entre letras */
+    padding: 15px; /* Espaciado interno */
+    border-radius: 10px; /* Bordes redondeados */
+    overflow: hidden; /* Esconde cualquier contenido fuera del área visible */
+    background-color: black; /* Fondo oscuro, estilo pantalla retro */
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5), 0 0 10px rgba(255, 255, 255, 0.3); /* Sombra suave */
+    animation: neonGlow 2s ease-in-out infinite alternate; /* Animación de brillo más suave */
+}
+
+@keyframes neonGlow {
+    0% {
+        text-shadow: 0 0 5px rgba(255, 255, 255, 0.5), 0 0 10px rgba(255, 255, 255, 0.3); /* Brillo suave */
+    }
+    50% {
+        text-shadow: 0 0 15px rgba(255, 255, 255, 0.7), 0 0 20px rgba(255, 0, 0, 0.7); /* Brillo más suave */
+    }
+    100% {
+        text-shadow: 0 0 5px rgba(255, 255, 255, 0.5), 0 0 10px rgba(255, 255, 255, 0.3); /* Regresa al brillo suave */
+    }
+}
+
+
+
+
+
+
+section2 {
+    padding: 80px;
+    text-align: left;
+    margin: 20px 15% 20px 15%; /* Ajusta el margen superior e inferior */
+    border-radius: 10px;
+}
+
+
+
+h1, p
+ {
+    font-family: 'KG Lego House', sans-serif; /* Aplica la fuente KG Lego House al texto en h1 y p */
+    
+}
+
+.st3title-text {
+    font-family: 'Eordeoghlakat', sans-serif; /* Aplica la fuente Eordeoghlakat a las palabras específicas */
+}
+
+.st2title-text {
+    font-family. 'True Lies', sans-serif;
+}
+
+.red-text {
+    color: #ff0000; /* Aplica el color rojo a los textos */
+}
+
+.white-text {
+    color: #ffffff;
+}
+
+/* Estilo para las redes sociales */
+.social-links {
+    display: flex; /* Alinea los elementos en una fila horizontal */
+    justify-content: center; /* Centra las imágenes horizontalmente */
+    margin-top: 20px; /* Espaciado por encima de las imágenes de redes sociales */
+}
+
+.social-icon {
+    width: 32px; /* Tamaño reducido para las imágenes */
+    height: 32px; /* Asegura que todas las imágenes mantengan el tamaño */
+    margin: 0 10px; /* Espaciado entre las imágenes */
+}
+
+/* Estilo del pie de página */
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #333333;
+    text-align: center;
+    padding: 10px;
+}
+
+footer a {
+    color: #ffffff;
+    margin: 0 10px;
+}
+
+footer a:hover {
+    color: #cccccc;
+}
+
+footer a img {
+    width: 48px; /* Ajusta el tamaño según sea necesario */
+    height: 48px; /* Mantiene la proporción de la imagen */
+    margin: 0 5px; /* Espaciado entre los íconos */
+    border: none; /* Elimina el borde de los enlaces */
+    border-radius: 0; /* Elimina los bordes redondeados */
+}

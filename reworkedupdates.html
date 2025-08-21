@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reworked Updates</title>
+    <link rel="icon" href="Images/Web/mini-logo.png" type="image/png">
+    <style>
+        /* Fuente personalizada 'KG Lego House' */
+        @font-face {
+            font-family: 'KG Lego House';
+            src: url('Fonts/KGLegoHouse.woff2') format('woff2'),
+                 url('Fonts/KGLegoHouse.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        /* Otra fuente personalizada para el título */
+        @font-face {
+            font-family: 'Eordeoghlakat';
+            src: url('Fonts/Eordeoghlakat.woff2') format('woff2'),
+                 url('Fonts/Eordeoghlakat.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        /* Aplicar la fuente personalizada a todo el contenido */
+        body, h1, h2, h3, p, a {
+            margin: 0;
+            font-family: 'KG Lego House', Arial, sans-serif;
+            background-color: black;
+            color: white;
+            text-align: center;
+            font-weight: normal;
+        }
+
+        /* Estilos para el Side Nav */
+        .sidenav {
+            height: 100%;
+            width: 200px;
+            position: fixed;
+            left: 0;
+            top: 0;
+            background-color: black;
+            padding-top: 20px;
+        }
+
+        .sidenav img {
+            display: block;
+            margin: 0 auto 50px;
+            width: 120%;
+            max-width: 500px;
+            position: relative;
+            left: -18px;
+        }
+
+        .sidenav a {
+            padding: 15px 20px;
+            text-decoration: none;
+            font-size: 22px;
+            color: white;
+            display: block;
+            transition: color 0.5s;
+            font-family: 'KG Lego House', Arial, sans-serif;
+            text-align: left;
+        }
+
+        .sidenav a:hover {
+            color: red;
+        }
+
+        .sidenav .discord-link {
+            position: absolute;
+            bottom: 20px;
+            width: 100%;
+            text-align: left;
+            color: grey;
+            font-family: 'KG Lego House', Arial, sans-serif;
+        }
+
+        .sidenav .discord-link:hover {
+            color: lightgrey;
+        }
+
+        /* Estilos para el contenido principal */
+        .main {
+            margin-left: 220px;
+            padding: 20px;
+        }
+
+        .main h1 {
+            font-size: 48px;
+            font-family: 'Eordeoghlakat', Arial, sans-serif;
+            color: white;
+            font-weight: normal; /* Eliminar negritas */
+        }
+
+        .main p {
+            color: grey;
+            font-size: 17px;
+            font-style: italic;
+            font-family: 'KG Lego House', Arial, sans-serif;
+        }
+
+        .qa-section p {
+            font-size: 22px;
+            color: #cfcfcf;
+            margin: 5px 0 20px;
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        /* Subtexto en gris */
+        .qa-section p.subtext {
+            font-size: 14px;
+            color: grey;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="sidenav">
+        <!-- GIF -->
+        <img src="Images/Gifs/TitleReWorked.gif" alt="GIF de Slendytubbies">
+        
+        <!-- Botón de volver a la página del juego -->
+        <a href="st3reworked.html">Volver a la página del juego</a>
+
+        <!-- Botón de volver a la página principal -->
+        <a href="home.html">Volver a la página principal</a>
+
+        <!-- Botón de Discord oficial (en la parte inferior) -->
+        <a href="https://discord.gg/R8enA5NWUS" class="discord-link">Discord Oficial</a>
+    </div>
+
+    <div class="main">
+        <h1>Historial de Actualizaciones</h1>
+        <p>Aquí podrás ver todas las actualizaciones de <strong>Slendytubbies III Re-Worked</strong> juegos.</p>
+        <p>posdata: Tambien puedes leer el historial de actualizacion dentro del juego en el launcher<p>
+        <p></p>
+        
+        <div class="qa-section">
+            <h2>Versión 1.3.2 (Antes Del Apocalipsis) -> Version Actual</h2>
+            <p>
+                <strong>Añadido:</strong><br>
+                Nueva pantalla de Inicio.<br>
+                Ruta original de Laa Laa viva.<br>
+                Iniciar sesión con GameJolt.<br>
+                Logros.<br>
+                Molino de viento en MainLand.<br>
+                Mochila para el Guardián en todos los capítulos.<br>
+                Idioma Portugués.<br>
+                Idioma Ruso.<br>
+                <!-- Idioma Rumano.<br> -->
+                Idioma Holandés.<br>
+                Escenas Post-Creditos para el final Malo, Malvado y Arrepentido.<br>
+                Huevos de Pascua en el Capitulo 1.<br>
+                Huevos de Pascua en el Capitulo 2 (Solo en la cueva).<br>
+                Opcion de "Pelaje en los personajes" en las configuraciones.<br>
+                <strong>Actualizado:</strong><br>
+                Escenas iniciales en el capítulo 0 (Día y Noche)<br>
+                Los créditos.<br>
+                <strong>Mejoras:</strong><br>
+                La pantalla de "Selecciónar Juego" fue cambiado por un Launcher.<br>
+                Dificultad aumentada en las batallas.<br>
+                Efectos de distorsión en la Camara de Visión Nocturna.<br>
+                <strong>Correcciones de errores:</strong><br>
+                Crasheos en el Capitulo 0.<br>
+                Quicktime events del Capitulo 0 y 2.<br>
+                Los efectos visuales del huevo de pascua de Laa Laa.<br>
+                Iluminacion de la cabaña de las montañas.<br>
+                Volumen de las musicas de las batallas.<br>
+                Bug donde los efectos visuales en ciertos capitulos quedaba activado.<br>
+                Configuracion de volumen.<br>
+                Sensibilidad del Mouse en el modo Primera Persona.<br>
+                Laa Laa atascada en el Capitulo 2.<br>
+                Ataques teledirijidos en batallas (Capitulo 3).<br>
+                <strong>Eliminado:</strong><br>
+                Viejo Launcher.<br>
+                Selector de Juegos Viejo.<br>
+                Movimiento del interfaz de la Camara de Visión Nocturna.<br>
+                Opcion de "Sincronización Vertical" en las configuraciones.<br>
+            </p>
+            
+            <h2>Versión 1.3.1 (Parche UltraBugFix) -> Version Actual (GAMEJOLT)</h2>
+            <p>
+                <strong>Añadido:</strong><br>
+                Nueva pantalla inicial (no launcher).<br>
+                Nueva opción en el menú de pausa.<br>
+                <strong>Correcciónes de errores:</strong><br>
+                Capítulo 3 roto en flashbacks.<br>
+                Errores de traducción de batalla de Po en el Capítulo 3.
+            </p>
+
+            <h2>Versión 1.3 (Campaña Completa)</h2>
+            <p>
+                <strong>Añadido:</strong><br>
+                Capítulo 3.<br>
+                Nuevo launcher.<br>
+                Nuevo menú principal.<br>
+                Nuevas configuraciones.<br>
+                <strong>Eliminado:</strong><br>
+                Modo Recoger.
+            </p>
+
+            <h2>(DEMO) Versión 1.2</h2>
+            <p>
+                <strong>Añadido:</strong><br>
+                Capítulo 2 Completo.<br>
+                Capítulos desbloqueables.<br>
+                Correcciones de errores y ajustes.
+            </p>
+
+            <h2>(DEMO) Versión 1.1</h2>
+            <p>
+                <strong>Añadido:</strong><br>
+                Nuevo menú principal.<br>
+                Nuevo modo de juego (Modo Recoger BETA).<br>
+                Nuevas características.<br>
+                Selección de capítulo.<br>
+                Capítulo 0 completo.<br>
+                Capítulo 2 DEMO.<br>
+                Corrección de errores y ajustes.<br>
+                Optimización y etc...<br>
+            </p>
+
+            <h2>(DEMO) Versión 1.0</h2>
+            <p>
+                Versión de lanzamiento por primera vez del juego.
+            </p>
+            <!-->
+            <p><p><strong></strong></p></p>
+            <p></p>
+            <!-->
+        </div>
+    </div>
+
+</body>
+
+    <script>
+        // Función para reproducir un sonido
+        function playSound(audioFile) {
+            const audio = new Audio(audioFile);
+            audio.play();
+        }
+
+        // Obtener todos los enlaces del side nav
+        const navLinks = document.querySelectorAll('.sidenav a');
+
+        // Agregar los eventos hover y click
+        navLinks.forEach(link => {
+            // Reproducir sonido cuando el mouse pasa sobre el enlace
+            link.addEventListener('mouseenter', () => {
+                playSound('Sounds/Select.wav');
+            });
+
+            // Reproducir sonido cuando se hace clic en el enlace
+            link.addEventListener('click', () => {
+                playSound('Sounds/Click.wav');
+            });
+        });
+    </script>
+    
+</html>
+

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Noticias | DW Studios</title>
+  <link rel="stylesheet" href="NewsStyle.css" />
+  <!-- Favicon -->
+  <link rel="icon" href="Images/Web/mini-logo.png" type="image/png">
+</head>
+<script>
+  window.addEventListener('DOMContentLoaded', () => {
+    const marquee = document.querySelector('.news-marquee');
+    const text = marquee.querySelector('.news-marquee-text');
+
+    const speed = 120; // píxeles por segundo (puedes ajustar este valor)
+
+    const textWidth = text.offsetWidth;
+    const duration = textWidth / speed;
+
+    marquee.style.animationDuration = `${duration}s`;
+  });
+</script>
+<body>
+  <!-- HEADER igual a home.html -->
+  <header>
+    <a href="https://dw-studios.github.io/home.html">
+      <img src="Images/logo.png" alt="Logo DW Studios">
+    </a>
+    <nav>
+      <a href="home.html">Inicio</a>
+      <a href="news.html">Noticías</a>
+      <div class="dropdown">
+        <a href="#">Juegos <span class="arrow">&#9662;</span></a>
+        <div class="dropdown-content">
+          <a href="st3reworked.html">SlendyTUBBIES <span class="red-text">III</span> RE-<span class="red-text">WORKED</span></a>
+          <!--<a href="st2fixed.html" class="st2-text"><span class="red-text">Slendytubbies II</span> (Fixed-Online)</a>
+          <a href="error53remake.html">Error 53 (Remake)</a>-->
+        </div>
+      </div>
+    </nav>
+  </header>
+<div class="news-marquee-container">
+  <div class="news-marquee">
+    <div class="news-marquee-text">
+¡Bienvenidos todos a nuestra pagina oficial!                                                        ¡SlendyTUBBIES <span class="red-text">III</span> RE-<span class="red-text">WORKED</span> Ha Sido Actualizado!                                                        ¡Mas juegos en la pagina proximamente!                                                        ¿Alguien lee esto por lo menos?                                                        ¡Siguenos en nuestras redes sociales que estan justo abajo!
+    </div>
+  </div>
+</div>
+
+  <main>
+      <section class="news-post">
+      <h2>¡SlendyTUBBIES <span class="red-text">III</span> RE-<span class="red-text">WORKED</span> Ha Sido Actualizado!</h2>
+      <p><a href="st3reworked.html">SlendyTUBBIES <span class="red-text">III</span> RE-<span class="red-text">WORKED</span></a> ha recibido una actualización, la cual es la "1.3.2" si desea ver los cambios que contiene esta nueva actualización, puedes verlo aquí en la <a href="reworkedupdates.html">Lista de Cambios.</a></p>
+      <p>Y disculpen si el "The Apocalypse DLC" aun no sale, estamos teniendo complicaciones con el desarrollo del DLC y como aun nos falta mucho por hacer, decidimos sacar una actualización pequeña de la campaña. Asi que perdon por ello.</p>
+      <p>En otras noticias, se estara trabajando proximamente en un port para <span class="green-text">ANDROID</span> e <span class="lightgray-text">IOS</span>, no sabemos cuanto tardara en hacerse el port. Pero tengan paciencia :)</p>
+      <div class="carousel">
+        <div class="carousel-images">
+          <img src="Images/NewsImages/RELEASED1.3.2.png" alt="Imagen 1" class="active">
+        </div>
+      </div>
+
+      <p>¡Descarguenlo AHORA!</p>
+    </section>
+    
+    <!-- Posts Templates -->
+    <!-- === Publicación con carrusel de imágenes === -->
+    <!--<section class="news-post">
+      <h2>Título de la noticia con carrusel</h2>
+      <p>Descripción introductoria de la noticia.</p>
+
+      <div class="carousel">
+        <button class="prev" onclick="moveSlide(-1)">◀</button>
+        <div class="carousel-images">
+          <img src="Images/img1.png" alt="Imagen 1" class="active">
+          <img src="Images/img2.png" alt="Imagen 2">
+          <img src="Images/img3.png" alt="Imagen 3">
+        </div>
+        <button class="next" onclick="moveSlide(1)">▶</button>
+      </div>
+
+      <div class="indicators">
+        <span class="dot active" onclick="goToSlide(0)"></span>
+        <span class="dot" onclick="goToSlide(1)"></span>
+        <span class="dot" onclick="goToSlide(2)"></span>
+      </div>
+
+      <p>Comentario adicional debajo del carrusel.</p>
+    </section>-->
+
+    <!-- === Publicación solo con video === -->
+    <!--
+    <section class="news-post">
+      <h2>Título de la noticia con video</h2>
+      <p>Texto de descripción del video.</p>
+
+      <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                title="YouTube video"
+                allowfullscreen></iframe>
+      </div>
+
+      <p>Texto adicional después del video.</p>
+    </section>
+    -->
+
+    <!-- === Publicación combinada video + carrusel === -->
+    <!--
+    <section class="news-post">
+      <h2>Noticia con video y carrusel</h2>
+      <p>Introducción al contenido multimedia.</p>
+
+      <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                title="YouTube video"
+                allowfullscreen></iframe>
+      </div>
+
+      <div class="carousel">
+        <button class="prev" onclick="moveSlide(-1)">◀</button>
+        <div class="carousel-images">
+          <img src="Images/img1.png" alt="Imagen 1" class="active">
+          <img src="Images/img2.png" alt="Imagen 2">
+          <img src="Images/img3.png" alt="Imagen 3">
+        </div>
+        <button class="next" onclick="moveSlide(1)">▶</button>
+      </div>
+
+      <div class="indicators">
+        <span class="dot active" onclick="goToSlide(0)"></span>
+        <span class="dot" onclick="goToSlide(1)"></span>
+        <span class="dot" onclick="goToSlide(2)"></span>
+      </div>
+    </section>
+    -->
+  </main>
+
+  <!-- FOOTER igual a home.html -->
+  <footer>
+    <p>DW Studios&copy; Todos los derechos reservados.</p>
+    <div class="social-links">
+      <a href="https://www.youtube.com/@DWStudiosOFFICIALST3REWORKED" target="_blank">
+        <img class="social-icon" src="Images/youtube.png" alt="YouTube">
+      </a>
+      <a href="https://x.com/DWStudiosOFF" target="_blank">
+        <img class="social-icon" src="Images/twitter.png" alt="Twitter">
+      </a>
+      <a href="https://github.com/DW-Studios/DW-Studios.github.io" target="_blank">
+        <img class="social-icon" src="Images/github.png" alt="GitHub">
+      </a>
+      <a href="https://gamejolt.com/@DW-Studios-OFFICIAL" target="_blank">
+        <img class="social-icon" src="Images/gamejolt.png" alt="GameJolt">
+      </a>
+      <a href="https://discord.gg/R8enA5NWUS" target="_blank">
+        <img class="social-icon" src="Images/discord.png" alt="Discord">
+      </a>
+    </div>
+  </footer>
+
+  <script src="NewsScript.js"></script>
+</body>
+</html>

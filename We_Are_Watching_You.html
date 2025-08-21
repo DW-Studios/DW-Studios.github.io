@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>- .... . / - .. - .-.. . / ... .... --- ..- .-.. -.. / -... . / .... . .-. . .-.-.- / .. / .--- ..- ... - / .... .- ...- . -. - / - .... --- ..- --. .... - / --- ..-. / --- -. . / -.. -.. -.. -.. -.. -.. .-.-.</title>
+    <link rel="icon" href="Images/Web/logocustard.png" type="image/png">
+    <style>
+        @font-face {
+            font-family: 'KGLegoHouse';
+            src: url('https://dw-studios.github.io/Fonts/KGLegoHouse.woff2') format('woff2'),
+                 url('https://dw-studios.github.io/Fonts/KGLegoHouse.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        body {
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: black;
+            color: white;
+            font-family: 'KGLegoHouse', Arial, sans-serif;
+            font-size: 24px;
+            text-align: center;
+        }
+        #closeButton {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 20px;
+            font-family: 'KGLegoHouse', Arial, sans-serif;
+            border: none;
+            background-color: black;
+            color: white;
+            cursor: pointer;
+            opacity: 0;
+            transition: opacity 10s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+    <div>.. -. ... .--. . -.-. - .-.-.- .-.-.- .-.-.- .-.-</div>
+    <!-- -.-. .... .- .--. - . .-. / ....- / .--. .- .-. - / .---- / .. ... / -.-. --- -- .. -. --. .-.-.- .-.-.- .-.-.- .-.-. -->
+    <!-- QnV0IGFyZSB5b3Ugc3VyZSBhYm91dCB5b3VyIGRlc3Rpbnk/ -->
+    <!-- 596f75206e65656420746f207265636f6e736964657220796f757220616374696f6e732e20576861746576657220796f7520646f2e2e2e -->
+    <!-- 01000100 01001111 01001110 00100111 01010100 00100000 01001011 01001001 01001100 01001100 00100000 01000101 01010110 01000101 01010010 01011001 01001111 01001110 01000101 00101110 -->
+    <button id="closeButton">Watch chapter 4 part 1 full gameplay</button>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            setTimeout(function() {
+                document.getElementById("closeButton").style.opacity = "1";
+            }, 3000);
+        });
+
+        document.getElementById("closeButton").addEventListener("click", function() {
+            if (window.history.length > 1) {
+                window.history.back(); // Volver a la página anterior si hay historial
+            } else {
+                window.open('', '_self').close(); // Intentar cerrar si es posible
+            }
+        });
+    </script>
+</body>
+</html>
