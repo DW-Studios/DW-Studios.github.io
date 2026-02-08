@@ -10,8 +10,6 @@
             font-family: 'KGLegoHouse';
             src: url('Fonts/KGLegoHouse.woff2') format('woff2'),
                  url('Fonts/KGLegoHouse.woff') format('woff');
-            font-weight: normal;
-            font-style: normal;
         }
 
         body {
@@ -39,33 +37,50 @@
             font-size: 1.2rem;
             opacity: 0.75;
         }
+
+        video {
+            display: none;
+            width: 100vw;
+            height: 100vh;
+            object-fit: cover;
+        }
     </style>
 </head>
 <body>
 
-    <div id="countdown">Cargando...</div>
+    <div id="countdown">10:00</div>
     <div id="coming-soon">Coming Soon</div>
 
+    <!-- VIDEO -->
+    <video id="finalVideo" src="rickroll.mp4"></video>
+
     <script>
-        const targetDate = new Date("February 10, 2026 00:00:00").getTime();
+        let timeLeft = 10 * 60; // 10 minutos en segundos
+
+        const countdownEl = document.getElementById("countdown");
+        const comingSoonEl = document.getElementById("coming-soon");
+        const video = document.getElementById("finalVideo");
 
         const timer = setInterval(() => {
-            const now = new Date().getTime();
-            const distance = targetDate - now;
+            const minutes = Math.floor(timeLeft / 60);
+            const seconds = timeLeft % 60;
 
-            if (distance <= 0) {
+            countdownEl.textContent =
+                `${minutes}:${seconds.toString().padStart(2, "0")}`;
+
+            timeLeft--;
+
+            if (timeLeft < 0) {
                 clearInterval(timer);
-                document.getElementById("countdown").innerHTML = "¡Ya disponible!";
-                return;
+
+                // Ocultar texto
+                countdownEl.style.display = "none";
+                comingSoonEl.style.display = "none";
+
+                // Mostrar y reproducir video
+                video.style.display = "block";
+                video.play();
             }
-
-            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-            document.getElementById("countdown").innerHTML =
-                `${days}d ${hours}h ${minutes}m ${seconds}s`;
         }, 1000);
     </script>
 
