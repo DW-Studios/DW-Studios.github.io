@@ -23,14 +23,24 @@
             justify-content: center;
             align-items: center;
             overflow: hidden;
+            cursor: pointer;
+        }
+
+        #start {
+            position: absolute;
+            font-size: 2.5rem;
+            opacity: 0.85;
+            text-align: center;
         }
 
         #countdown {
+            display: none;
             font-size: 4rem;
             text-align: center;
         }
 
         #coming-soon {
+            display: none;
             position: fixed;
             bottom: 20px;
             left: 20px;
@@ -48,40 +58,47 @@
 </head>
 <body>
 
-    <div id="countdown">05:00</div>
+    <div id="start">Click to start</div>
+    <div id="countdown">10:00</div>
     <div id="coming-soon">Coming Soon</div>
 
     <!-- VIDEO -->
-    <video id="finalVideo" src="rickroll.mp4"></video>
+    <video id="finalVideo" src="video.mp4" playsinline></video>
 
     <script>
-        let timeLeft = 1 * 5; // 10 minutos en segundos
+        let timeLeft = 1 * 10; // 10 minutos
 
+        const start = document.getElementById("start");
         const countdownEl = document.getElementById("countdown");
         const comingSoonEl = document.getElementById("coming-soon");
         const video = document.getElementById("finalVideo");
 
-        const timer = setInterval(() => {
-            const minutes = Math.floor(timeLeft / 60);
-            const seconds = timeLeft % 60;
+        start.addEventListener("click", () => {
+            start.style.display = "none";
+            countdownEl.style.display = "block";
+            comingSoonEl.style.display = "block";
 
-            countdownEl.textContent =
-                `${minutes}:${seconds.toString().padStart(2, "0")}`;
+            const timer = setInterval(() => {
+                const minutes = Math.floor(timeLeft / 60);
+                const seconds = timeLeft % 60;
 
-            timeLeft--;
+                countdownEl.textContent =
+                    `${minutes}:${seconds.toString().padStart(2, "0")}`;
 
-            if (timeLeft < 0) {
-                clearInterval(timer);
+                timeLeft--;
 
-                // Ocultar texto
-                countdownEl.style.display = "none";
-                comingSoonEl.style.display = "none";
+                if (timeLeft < 0) {
+                    clearInterval(timer);
 
-                // Mostrar y reproducir video
-                video.style.display = "block";
-                video.play();
-            }
-        }, 1000);
+                    countdownEl.style.display = "none";
+                    comingSoonEl.style.display = "none";
+
+                    video.style.display = "block";
+                    video.muted = false;
+                    video.play();
+                }
+            }, 1000);
+        }, { once: true });
     </script>
 
 </body>
