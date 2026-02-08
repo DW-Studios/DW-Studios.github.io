@@ -5,15 +5,22 @@
     <title>Coming Soon</title>
 
     <style>
+        /* FUENTE PERSONALIZADA */
+        @font-face {
+            font-family: 'KGLegoHouse';
+            src: url('Fonts/KGLegoHouse.woff2') format('woff2'),
+                 url('Fonts/KGLegoHouse.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
         body {
             margin: 0;
             width: 100vw;
             height: 100vh;
             background-color: #000;
             color: #fff;
-            font-family: 'KGLegoHouse';
-            src: url('Fonts/KGLegoHouse.woff2') format('woff2'),
-            url('Fonts/KGLegoHouse.woff') format('woff');
+            font-family: 'KGLegoHouse', sans-serif;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -22,11 +29,7 @@
 
         #countdown {
             font-size: 4rem;
-            font-weight: 600;
             text-align: center;
-            font-family: 'KGLegoHouse';
-            src: url('Fonts/KGLegoHouse.woff2') format('woff2'),
-            url('Fonts/KGLegoHouse.woff') format('woff');
         }
 
         #coming-soon {
@@ -34,10 +37,6 @@
             bottom: 20px;
             left: 20px;
             font-size: 1.2rem;
-            font-weight: 300;
-            font-family: 'KGLegoHouse';
-            src: url('Fonts/KGLegoHouse.woff2') format('woff2'),
-            url('Fonts/KGLegoHouse.woff') format('woff');
             opacity: 0.75;
         }
     </style>
