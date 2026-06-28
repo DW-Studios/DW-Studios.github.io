@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Página no encontrada</title>
+
+<style>
+*{
+    box-sizing:border-box;
+}
+
+body{
+    margin:0;
+    width:100vw;
+    height:100vh;
+    background:#000;
+    color:white;
+    font-family:Arial,Helvetica,sans-serif;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    overflow:hidden;
+    transition:background-image .3s;
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+}
+
+.container{
+    max-width:700px;
+    padding:30px;
+}
+
+p{
+    font-size:22px;
+    line-height:1.5;
+    margin-bottom:35px;
+}
+
+code{
+    color:#66cfff;
+    background:rgba(255,255,255,.08);
+    padding:3px 8px;
+    border-radius:6px;
+    word-break:break-all;
+}
+
+.buttons{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+button{
+    padding:12px 26px;
+    font-size:18px;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    transition:.2s;
+}
+
+button:hover{
+    transform:scale(1.05);
+}
+
+.reload{
+    background:white;
+    color:black;
+}
+
+.home{
+    background:#2196F3;
+    color:white;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container" id="container">
+
+    <p id="message"></p>
+
+    <div class="buttons">
+        <button class="reload" id="reloadButton">
+            Recargar
+        </button>
+
+        <button class="home" onclick="location.href='/'">
+            Vuelva al inicio
+        </button>
+    </div>
+
+</div>
+
+<audio id="scareAudio" preload="auto">
+    <source src="ScareReload.wav" type="audio/wav">
+</audio>
+
+<script>
+
+const pagina = window.location.pathname;
+
+document.getElementById("message").innerHTML =
+`Lo sentimos, <code>${pagina}</code> no existe o no tiene permisos para acceder.<br><br>
+Trate de recargar esta página o vuelva al inicio.`;
+
+let reloads = Number(sessionStorage.getItem("reloadCount") || 0);
+
+document.getElementById("reloadButton").addEventListener("click", () => {
+
+    reloads++;
+    sessionStorage.setItem("reloadCount", reloads);
+
+    if(reloads > 5){
+
+        sessionStorage.removeItem("reloadCount");
+        activarScare();
+
+    }else{
+
+        location.reload();
+
+    }
+
+});
+
+function activarScare(){
+
+    document.getElementById("container").style.display = "none";
+
+    document.body.style.backgroundImage = "url('Images/ScareReload.png')";
+
+    const audio = document.getElementById("scareAudio");
+    audio.currentTime = 0;
+    audio.play().catch(() => {});
+
+    setTimeout(() => {
+
+        window.close();
+
+        setTimeout(() => {
+            location.href = "/";
+        }, 250);
+
+    }, 3000);
+
+}
+
+</script>
+
+</body>
+</html>
