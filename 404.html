@@ -10,22 +10,21 @@
     box-sizing:border-box;
 }
 
-body{
+html, body{
     margin:0;
-    width:100vw;
-    height:100vh;
+    width:100%;
+    height:100%;
+}
+
+body{
     background:#000;
-    color:white;
+    color:#fff;
     font-family:Arial,Helvetica,sans-serif;
     display:flex;
     justify-content:center;
     align-items:center;
     text-align:center;
     overflow:hidden;
-    transition:background-image .3s;
-    background-size:cover;
-    background-position:center;
-    background-repeat:no-repeat;
 }
 
 .container{
@@ -35,14 +34,14 @@ body{
 
 p{
     font-size:22px;
-    line-height:1.5;
+    line-height:1.6;
     margin-bottom:35px;
 }
 
 code{
     color:#66cfff;
     background:rgba(255,255,255,.08);
-    padding:3px 8px;
+    padding:4px 8px;
     border-radius:6px;
     word-break:break-all;
 }
@@ -55,12 +54,12 @@ code{
 }
 
 button{
-    padding:12px 26px;
+    padding:12px 28px;
     font-size:18px;
     border:none;
     border-radius:8px;
     cursor:pointer;
-    transition:.2s;
+    transition:transform .15s;
 }
 
 button:hover{
@@ -68,17 +67,27 @@ button:hover{
 }
 
 .reload{
-    background:white;
-    color:black;
+    background:#ffffff;
+    color:#000;
 }
 
 .home{
     background:#2196F3;
-    color:white;
+    color:#fff;
+}
+
+#scareImage{
+    position:fixed;
+    inset:0;
+    width:100vw;
+    height:100vh;
+    object-fit:cover;
+    display:none;
+    z-index:9999;
 }
 </style>
-</head>
 
+</head>
 <body>
 
 <div class="container" id="container">
@@ -96,6 +105,8 @@ button:hover{
     </div>
 
 </div>
+
+<img id="scareImage" src="Images/ScareReload.png" alt="">
 
 <audio id="scareAudio" preload="auto">
     <source src="ScareReload.wav" type="audio/wav">
@@ -131,20 +142,27 @@ document.getElementById("reloadButton").addEventListener("click", () => {
 
 function activarScare(){
 
+    // Oculta el contenido
     document.getElementById("container").style.display = "none";
 
-    document.body.style.backgroundImage = "url('Images/ScareReload.png')";
+    // Muestra la imagen
+    document.getElementById("scareImage").style.display = "block";
 
+    // Reproduce el sonido
     const audio = document.getElementById("scareAudio");
     audio.currentTime = 0;
+
     audio.play().catch(() => {});
 
+    // Espera 3 segundos
     setTimeout(() => {
 
+        // Intenta cerrar la pestaña
         window.close();
 
+        // Si el navegador no lo permite, vuelve al inicio
         setTimeout(() => {
-            location.href = "/";
+            location.replace("/");
         }, 250);
 
     }, 3000);
