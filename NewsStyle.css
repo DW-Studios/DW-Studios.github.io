@@ -3,16 +3,33 @@
     font-family: 'Eordeoghlakat';
     src: url('Fonts/Eordeoghlakat.woff2') format('woff2'),
          url('Fonts/Eordeoghlakat.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
 }
 @font-face {
     font-family: 'KG Lego House';
     src: url('Fonts/KGLegoHouse.woff2') format('woff2'),
          url('Fonts/KGLegoHouse.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
 }
 @font-face {
     font-family: 'True Lies';
     src: url('Fonts/TrueLies.woff2') format('woff2'),
          url('Fonts/TrueLies.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'plasdrip';
+    src: url('Fonts/plasdrip.woff2') format('woff2'),
+         url('Fonts/plasdrip.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
 }
 
 /* Estilos generales */
@@ -86,12 +103,31 @@ header nav a:hover {
     font-family: 'True Lies', sans-serif;
     font-size: 13px;
 }
+.dropdown-content a.stbutton-text {
+    font-family: 'KG Lego House', sans-serif;
+    font-size: 15.1px;
+}
+.dropdown-content a.plasdrip-text {
+    font-family: 'plasdrip', sans-serif;
+    font-size: 9px;
+}
 .dropdown-content a:hover {
     background-color: #575757;
 }
 .dropdown a,
 .dropdown a:hover {
     text-decoration: none;
+}
+
+.st3title-text {
+    font-family: 'Eordeoghlakat', sans-serif;
+}
+.st2title-text {
+    font-family: 'True Lies', sans-serif;
+}
+.stsubtitle-text {
+    font-family: 'plasdrip', sans-serif;
+    font-size: 11.5px;
 }
 
 /* MAIN */

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Without Hamachi Updates</title>
+    <link rel="icon" href="Images/Web/mini-logo.png" type="image/png">
+    <style>
+        /* Fuente personalizada 'KG Lego House' */
+        @font-face {
+            font-family: 'KG Lego House';
+            src: url('Fonts/KGLegoHouse.woff2') format('woff2'),
+                 url('Fonts/KGLegoHouse.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        /* Otra fuente personalizada para el título */
+        @font-face {
+            font-family: 'Eordeoghlakat';
+            src: url('Fonts/Eordeoghlakat.woff2') format('woff2'),
+                 url('Fonts/Eordeoghlakat.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        /* Aplicar la fuente personalizada a todo el contenido */
+        body, h1, h2, h3, p, a {
+            margin: 0;
+            font-family: 'KG Lego House', Arial, sans-serif;
+            background-color: black;
+            color: white;
+            text-align: center;
+            font-weight: normal;
+        }
+
+        /* Estilos para el Side Nav */
+        .sidenav {
+            height: 100%;
+            width: 200px;
+            position: fixed;
+            left: 0;
+            top: 0;
+            background-color: black;
+            padding-top: 20px;
+        }
+
+        .sidenav img {
+            display: block;
+            margin: 0 auto 50px;
+            width: 120%;
+            max-width: 500px;
+            position: relative;
+            left: -18px;
+        }
+
+        .sidenav a {
+            padding: 15px 20px;
+            text-decoration: none;
+            font-size: 22px;
+            color: white;
+            display: block;
+            transition: color 0.5s;
+            font-family: 'KG Lego House', Arial, sans-serif;
+            text-align: left;
+        }
+
+        .sidenav a:hover {
+            color: red;
+        }
+
+        .sidenav .discord-link {
+            position: absolute;
+            bottom: 20px;
+            width: 100%;
+            text-align: left;
+            color: grey;
+            font-family: 'KG Lego House', Arial, sans-serif;
+        }
+
+        .sidenav .discord-link:hover {
+            color: lightgrey;
+        }
+
+        /* Estilos para el contenido principal */
+        .main {
+            margin-left: 220px;
+            padding: 20px;
+        }
+
+        .main h1 {
+            font-size: 48px;
+            font-family: 'Eordeoghlakat', Arial, sans-serif;
+            color: white;
+            font-weight: normal; /* Eliminar negritas */
+        }
+
+        .main p {
+            color: grey;
+            font-size: 17px;
+            font-style: italic;
+            font-family: 'KG Lego House', Arial, sans-serif;
+        }
+
+        .qa-section p {
+            font-size: 22px;
+            color: #cfcfcf;
+            margin: 5px 0 20px;
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        /* Subtexto en gris */
+        .qa-section p.subtext {
+            font-size: 14px;
+            color: grey;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="sidenav">
+        <!-- GIF -->
+        
+        <!-- Botón de volver a la página del juego -->
+        <a href="stwh.html">Volver a la página del juego</a>
+
+        <!-- Botón de volver a la página principal -->
+        <a href="home.html">Volver a la página principal</a>
+
+        <!-- Botón de Discord oficial (en la parte inferior) -->
+        <a href="https://discord.gg/R8enA5NWUS" class="discord-link">Discord Oficial</a>
+    </div>
+
+    <div class="main">
+        <h1>Historial de Actualizaciones</h1>
+        <p>Aquí podrás ver todas las actualizaciones de <strong>Slendytubbies Classic (Without Hamachi!)</strong></p>
+        <p></p>
+        
+        <div class="qa-section">
+            <h2>Versión 2.0</h2>
+            <p>
+                <strong>Añadido:</strong><br>
+                Efectos visuales.<br>
+                Molino de viento en el mapa.<br>
+                Gorros comprables.<br>
+                Gorros semanales.<br>
+                4 Nuevos idiomas.<br>
+                <strong>Arreglado:</strong><br>
+                Skins personalizadas.<br>
+            </p>
+
+            <h2>Versión 1.11 (Parche)</h2>
+            <p>
+                <strong>Arreglado:</strong><br>
+                Los servidores vuelven a funcionar correctamente.<br>
+            </p>
+
+            <h2>Versión 1.1</h2>
+            <p>
+                <strong>Añadido:</strong><br>
+                Modo "Un Jugador".<br>
+                Skins personalizadas.<br>
+                Popups del juego original.<br>
+                Logros.<br>
+                Nuevo huevo de pascua.<br>
+                Sustos de Slendytubbies Beta v2.<br>
+                <strong>Arreglado:.</strong><br>
+                Casa Teletubbie.<br>
+            </p>
+
+            <h2>Versión 1.0</h2>
+            <p>
+                Versión de lanzamiento por primera vez del juego.
+            </p>
+        </div>
+    </div>
+
+</body>
+
+    <script>
+        // Función para reproducir un sonido
+        function playSound(audioFile) {
+            const audio = new Audio(audioFile);
+            audio.play();
+        }
+
+        // Obtener todos los enlaces del side nav
+        const navLinks = document.querySelectorAll('.sidenav a');
+
+        // Agregar los eventos hover y click
+        navLinks.forEach(link => {
+            // Reproducir sonido cuando el mouse pasa sobre el enlace
+            link.addEventListener('mouseenter', () => {
+                playSound('Sounds/Select.wav');
+            });
+
+            // Reproducir sonido cuando se hace clic en el enlace
+            link.addEventListener('click', () => {
+                playSound('Sounds/Click.wav');
+            });
+        });
+    </script>
+    
+</html>
+
+
