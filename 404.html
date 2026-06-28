@@ -79,11 +79,13 @@ button:hover{
 #scareImage{
     position:fixed;
     inset:0;
-    width:100vw;
-    height:100vh;
-    object-fit:cover;
+    width:100%;
+    height:100%;
+    object-fit:contain; /* Usa 'cover' si quieres que llene toda la pantalla recortando un poco */
+    object-position:center;
     display:none;
     z-index:9999;
+    background:black;
 }
 </style>
 
